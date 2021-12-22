@@ -1,6 +1,6 @@
 ## MetaPro
 
-**Download MetaPro:** https://drive.google.com/file/d/1sXvFjIgK8_xvaLyq7AbHM4bkerFsSwcO/view?usp=sharing
+**Download MetaPro(Windows):** https://drive.google.com/file/d/1sXvFjIgK8_xvaLyq7AbHM4bkerFsSwcO/view?usp=sharing
 
 **Start MetaPro:** MetaProStart.bat
 
