@@ -2,6 +2,8 @@
 
 **Download MetaPro(Windows):** https://drive.google.com/file/d/1sXvFjIgK8_xvaLyq7AbHM4bkerFsSwcO/view?usp=sharing
 
+**Download MetaPro(Mac):** https://drive.google.com/file/d/1GUHdrw8T8ie1HZNXKWr_ARZ7JMicEeJN/view?usp=sharing
+
 **Demo Website:** http://47.88.77.176:8080/
 
 **Start MetaPro:** MetaProStart.bat
