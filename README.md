@@ -4,6 +4,10 @@
 
 **Download MetaPro(Mac):** https://drive.google.com/file/d/1GUHdrw8T8ie1HZNXKWr_ARZ7JMicEeJN/view?usp=sharing
 
+**Download MetaPro(Ubuntu):** https://drive.google.com/file/d/1AVP4jyze4wifE7b3OxKsSpGepRERpRrZ/view?usp=sharing
+
+**Download MetaPro(Centos):** https://drive.google.com/file/d/1BwX_GqzVD5Xj3nVreAtZnKH27FZWiVEf/view?usp=sharing
+
 **Demo Website:** http://47.88.77.176:8080/
 
 **Start MetaPro:** MetaProStart.bat
