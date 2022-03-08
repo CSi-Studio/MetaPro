@@ -5,16 +5,19 @@
 ![](./image/Framework.png)
 
 ---
+
 ## Main Interface
 
 ![](./image/Interface.png)
 
 ---
+
 ## Demo
 
 [`http://47.88.77.176`](http://47.88.77.176)
 
 ---
+
 ## Download
 
 ### Software
@@ -30,6 +33,7 @@
 [OneDrive](https://1drv.ms/u/s!AqS3L_kdjWbKgp43W1l8-GteFvv6ZQ?e=xukUkb)
 
 ---
+
 ## How to install
 
 > Extract MetaPro zip file to any directory you want.
@@ -40,13 +44,15 @@
 
 - Open INSTALLATION_PATH folder
 - **start:** Right click `MetaProStart.bat`, run as administrator.
+
   **After successful startup, open a browser and connect to** **`localhost:8080`**
+
 - **stop:** Right click `MetaProStop.bat`, run as administrator
 - **uninstall:** Open `uninstall` folder. Right click `MetaProUnintall.bat`, run as administrator
 
-	 **Successful operation:**
+  **Successful operation:**
 
- 	The following operations appear in the terminal to indicate that the operation is successful:
+  The following operations appear in the terminal to indicate that the operation is successful:
   ![](./image/win.png)
 
 ### MacOs
@@ -54,7 +60,7 @@
 - Open a terminal
 
   ```
-  cd INSTALLATION_PATH 
+  cd INSTALLATION_PATH
   cd MetaproForMac
   ```
 
@@ -64,24 +70,26 @@
   bash MetaproStart.sh
   ```
 
+  **After successful startup, open a browser and connect to** **`localhost:8080`**
+
 - stop
 
   ```
   bash MetaproStop.sh
   ```
-	**After successful startup, open a browser and connect to** **`localhost:8080`**
+	
 - uninstall
 
   ```
   bash uninstall/MetaproUninstall.sh
   ```
 
-	**Successful operation:**
+  **Successful operation:**
 
   The following operations appear in the terminal to indicate that the operation is successful:
 
-	```bash
-	$ bash ./MetaproStart.sh
+  ```bash
+  $ bash ./MetaproStart.sh
   /Users/commands/Documents/code/MetaPro/MetaproForMac
   ********* Start Redis *********
   /Users/commands/Documents/code/MetaPro/MetaproForMac/redis
@@ -92,15 +100,14 @@
   forked process: 94332
 
   $ child process started successfully, parent exiting
-	```
+  ```
 
 ### Linux
-
 
 - Open a terminal
 
   ```
-  cd INSTALLATION_PATH 
+  cd INSTALLATION_PATH
   cd MetaproForUbuntu
   ```
 
@@ -110,24 +117,26 @@
   bash MetaproStart.sh
   ```
 
+  **After successful startup, open a browser and connect to** **`localhost:8080`**
+
 - stop
 
   ```
   bash MetaproStop.sh
   ```
-	**After successful startup, open a browser and connect to** **`localhost:8080`**
+
 - uninstall
 
   ```
   bash uninstall/MetaproUninstall.sh
   ```
 
-	**Successful operation:**
+  **Successful operation:**
 
   The following operations appear in the terminal to indicate that the operation is successful:
 
-	```bash
-	$ bash ./MetaproStart.sh
+  ```bash
+  $ bash ./MetaproStart.sh
   /Users/commands/Documents/code/MetaPro/MetaproForMac
   ********* Start Redis *********
   /Users/commands/Documents/code/MetaPro/MetaproForMac/redis
@@ -138,9 +147,10 @@
   forked process: 94332
 
   $ child process started successfully, parent exiting
-	```
+  ```
 
 ---
+
 ## How to use
 
 [GitBook](https://commands-1.gitbook.io/metapro/)
