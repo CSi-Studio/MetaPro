@@ -1,24 +1,18 @@
-<!-- ---
-lang: en-US
-title: MetaPro
-description: MetaPro README
---- -->(../guide/user-manual.md)
-
 # README
 
 ## User Manual
 
-[MetaPro User Manual](../guide/user-manual.md)
+[MetaPro User Manual](https://csi-studio.github.io/MetaPro/guide/user-manual.html)
 
 ## Framework
 
-![](/images/image_33.png)
+![](/docs/.vuepress/public/images/image_34.png)
 
 ---
 
 ## Main Interface
 
-![](/images/image_34.png)
+![](/docs/.vuepress/public/images/image_33.png)
 
 ---
 
