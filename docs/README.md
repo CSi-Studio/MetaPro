@@ -6,13 +6,13 @@
 
 ## Framework
 
-![](/docs/.vuepress/public/images/image_34.png)
+![](/images/image_34.png)
 
 ---
 
 ## Main Interface
 
-![](/docs/.vuepress/public/images/image_33.png)
+![](/images/image_33.png)
 
 ---
 
