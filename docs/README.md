@@ -2,7 +2,7 @@
 lang: en-US
 title: MetaPro
 description: MetaPro README
---- -->
+--- -->(../guide/user-manual.md)
 
 # README
 
@@ -53,7 +53,7 @@ description: MetaPro README
 ### Windows
 
 - Open INSTALLATION_PATH folder
-- **start:** Right click `MetaProStart.bat`, run as administrator.
+- **start:** Right click `MetaproStart.bat`, run as administrator.
 
   **Successful operation:**
 
@@ -61,7 +61,7 @@ description: MetaPro README
   ![](/images/win.png)
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
-- **stop:** Right click `MetaProStop.bat`, run as administrator
+- **stop:** Right click `MetaproStop.bat`, run as administrator
 - **uninstall:** Stop MetaPro and delete the installation folder.
 
 ### MacOs

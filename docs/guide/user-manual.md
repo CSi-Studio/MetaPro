@@ -62,7 +62,7 @@ If you have any questions, you can or contact us through Github or csi@csibio.ne
 
 ### 2.1 System and hardware requirements
 
-MetaPro is available for Windows 7 (or above), Linux and MacOS. The minimum and recommended system specifications are described in the following t5able.
+MetaPro is available for Windows 7 (or above), Linux and MacOS. The minimum and recommended system specifications are described in the following table.
 
 | **Specifications** | **Minimum**                    | **Recommended**                           |
 | ------------------ | ------------------------------ | ----------------------------------------- |
@@ -107,14 +107,14 @@ Here we use INSTALLATION_PATH to represent your installation path, for example `
 
 - Open INSTALLATION_PATH folder
 
-- **start:** Right click `MetaProStart.bat`, run as administrator.
+- **start:** Right click `MetaproStart.bat`, run as administrator.
 
   **Successful operation:**
   The following operations appear in the terminal to indicate that the operation is successful:
   ![](/images/win.png)
   **After successful startup, open a browser and connect to `localhost:8080`**
 
-- **stop:** Right click `MetaProStop.bat`, run as administrator
+- **stop:** Right click `MetaproStop.bat`, run as administrator
 
 - **uninstall:** Stop MetaPro and delete the installation folder.
 
