@@ -44,16 +44,15 @@
 
 - Open INSTALLATION_PATH folder
 - **start:** Right click `MetaProStart.bat`, run as administrator.
+  **Successful operation:**
 
+  The following operations appear in the terminal to indicate that the operation is successful:
+  ![](./image/win.png)
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
 - **stop:** Right click `MetaProStop.bat`, run as administrator
 - **uninstall:** Stop MetaPro and delete the installation folder.
 
-  **Successful operation:**
-
-  The following operations appear in the terminal to indicate that the operation is successful:
-  ![](./image/win.png)
 
 ### MacOs
 
@@ -69,6 +68,7 @@
   ```
   bash MetaproStart.sh
   ```
+**Successful operation:**
 
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
@@ -100,6 +100,16 @@ forked process: 94332
 $ child process started successfully, parent exiting
 ```
 
+- stop
+
+  ```
+  bash MetaproStop.sh
+  ```
+  
+- uninstall: Close the terminal, and delete the folder to uninstall MetaPro.
+
+
+
 ### Linux
 
 - Open a terminal
@@ -111,25 +121,9 @@ $ child process started successfully, parent exiting
 
 - start
 
-  ```
-  bash MetaproStart.sh
-  ```
-
-  **After successful startup, open a browser and connect to** **`localhost:8080`**
-
-- stop
-
-  ```
-  bash MetaproStop.sh
-  ```
-
-- uninstall
-
   Stop MetaPro and delete the installation folder.
 
-  **Successful operation:**
-
-  The following operations appear in the terminal to indicate that the operation is successful:
+The following operations appear in the terminal to indicate that the operation is successful:
 
   ```bash
   $ bash ./MetaproStart.sh
@@ -144,6 +138,17 @@ $ child process started successfully, parent exiting
 
   $ child process started successfully, parent exiting
   ```
+  **After successful startup, open a browser and connect to** **`localhost:8080`**
+
+- stop
+
+  ```
+  bash MetaproStop.sh
+  ```
+
+- uninstall: Close the terminal, and delete the folder to uninstall MetaPro.
+
+  
 
 ---
 
