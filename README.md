@@ -1,14 +1,18 @@
-# MetaPro user manual
+# README
+
+## User Manual 🥳
+
+[MetaPro User Manual](https://csi-studio.github.io/MetaPro/guide/user-manual.html)
 
 ## Framework
 
-![](./image/Framework.png)
+![](/docs/.vuepress/public/images/image_34.png)
 
 ---
 
 ## Main Interface
 
-![](./image/Interface.png)
+![](/docs/.vuepress/public/images/image_33.png)
 
 ---
 
@@ -43,15 +47,15 @@
 ### Windows
 
 - Open INSTALLATION_PATH folder
-- **start:** Right click `MetaProStart.bat`, run as administrator.
+- **start:** Right click `MetaproStart.bat`, run as administrator.
 
   **Successful operation:**
 
   The following operations appear in the terminal to indicate that the operation is successful:
-  ![](./image/win.png)
+  ![](/images/win.png)
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
-- **stop:** Right click `MetaProStop.bat`, run as administrator
+- **stop:** Right click `MetaproStop.bat`, run as administrator
 - **uninstall:** Stop MetaPro and delete the installation folder.
 
 ### MacOs
@@ -86,7 +90,7 @@
 
   $ child process started successfully, parent exiting
   ```
-  
+
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
 - stop
@@ -98,7 +102,6 @@
 - uninstall
 
   Stop MetaPro and delete the installation folder.
-
 
 ### Linux
 
@@ -149,4 +152,4 @@
 
 ## How to use
 
-[GitBook](https://commands-1.gitbook.io/metapro/)
+[UserManual](https://csi-studio.github.io/MetaPro/guide/user-manual.html)
