@@ -44,6 +44,7 @@
 
 - Open INSTALLATION_PATH folder
 - **start:** Right click `MetaProStart.bat`, run as administrator.
+
   **Successful operation:**
 
   The following operations appear in the terminal to indicate that the operation is successful:
@@ -52,7 +53,6 @@
 
 - **stop:** Right click `MetaProStop.bat`, run as administrator
 - **uninstall:** Stop MetaPro and delete the installation folder.
-
 
 ### MacOs
 
@@ -68,62 +68,10 @@
   ```
   bash MetaproStart.sh
   ```
-**Successful operation:**
-
-  **After successful startup, open a browser and connect to** **`localhost:8080`**
-
-- stop
-
-  ```
-  bash MetaproStop.sh
-  ```
-
-- uninstall
-
-  Stop MetaPro and delete the installation folder.
 
   **Successful operation:**
 
-The following operations appear in the terminal to indicate that the operation is successful:
-
-```bash
-$ bash ./MetaproStart.sh
-/Users/commands/Documents/code/MetaPro/MetaproForMac
-********* Start Redis *********
-/Users/commands/Documents/code/MetaPro/MetaproForMac/redis
-********* Start MongoDB *********
-/Users/commands/Documents/code/MetaPro/MetaproForMac/mongodb
-********* Start Metapro *********
-about to fork child process, waiting until server is ready for connections.
-forked process: 94332
-
-$ child process started successfully, parent exiting
-```
-
-- stop
-
-  ```
-  bash MetaproStop.sh
-  ```
-  
-- uninstall: Close the terminal, and delete the folder to uninstall MetaPro.
-
-
-
-### Linux
-
-- Open a terminal
-
-  ```
-  cd INSTALLATION_PATH
-  cd MetaproForUbuntu
-  ```
-
-- start
-
-  Stop MetaPro and delete the installation folder.
-
-The following operations appear in the terminal to indicate that the operation is successful:
+  The following operations appear in the terminal to indicate that the operation is successful:
 
   ```bash
   $ bash ./MetaproStart.sh
@@ -138,6 +86,7 @@ The following operations appear in the terminal to indicate that the operation i
 
   $ child process started successfully, parent exiting
   ```
+  
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
 - stop
@@ -146,9 +95,55 @@ The following operations appear in the terminal to indicate that the operation i
   bash MetaproStop.sh
   ```
 
-- uninstall: Close the terminal, and delete the folder to uninstall MetaPro.
+- uninstall
 
-  
+  Stop MetaPro and delete the installation folder.
+
+
+### Linux
+
+- Open a terminal
+
+  ```
+  cd INSTALLATION_PATH
+  cd MetaproForUbuntu
+  ```
+
+- start
+
+  ```
+  bash MetaproStart.sh
+  ```
+
+  **Successful operation:**
+
+  **After successful startup, open a browser and connect to** **`localhost:8080`**
+
+  The following operations appear in the terminal to indicate that the operation is successful:
+
+  ```bash
+  $ bash ./MetaproStart.sh
+  /Users/commands/Documents/code/MetaPro/MetaproForMac
+  ********* Start Redis *********
+  /Users/commands/Documents/code/MetaPro/MetaproForMac/redis
+  ********* Start MongoDB *********
+  /Users/commands/Documents/code/MetaPro/MetaproForMac/mongodb
+  ********* Start Metapro *********
+  about to fork child process, waiting until server is ready for connections.
+  forked process: 94332
+
+  $ child process started successfully, parent exiting
+  ```
+
+  **After successful startup, open a browser and connect to** **`localhost:8080`**
+
+- stop
+
+  ```
+  bash MetaproStop.sh
+  ```
+
+- uninstall: Stop MetaPro and delete the installation folder.
 
 ---
 
