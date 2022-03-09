@@ -1,4 +1,4 @@
-# Brief user manual of MetaPro
+# MetaPro user manual
 
 ## Framework
 

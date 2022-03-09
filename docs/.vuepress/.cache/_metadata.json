@@ -1,0 +1,36 @@
+{
+  "hash": "7aebe8c1",
+  "browserHash": "81f01373",
+  "optimized": {
+    "vue": {
+      "file": "/Users/commands/Desktop/WJW/code/MetaPro/docs/.vuepress/.cache/vue.js",
+      "src": "/Users/commands/Desktop/WJW/code/MetaPro/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "file": "/Users/commands/Desktop/WJW/code/MetaPro/docs/.vuepress/.cache/vue-router.js",
+      "src": "/Users/commands/Desktop/WJW/code/MetaPro/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "needsInterop": false
+    },
+    "@vue/devtools-api": {
+      "file": "/Users/commands/Desktop/WJW/code/MetaPro/docs/.vuepress/.cache/@vue_devtools-api.js",
+      "src": "/Users/commands/Desktop/WJW/code/MetaPro/node_modules/@vue/devtools-api/lib/esm/index.js",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "file": "/Users/commands/Desktop/WJW/code/MetaPro/docs/.vuepress/.cache/@vueuse_core.js",
+      "src": "/Users/commands/Desktop/WJW/code/MetaPro/node_modules/@vueuse/core/index.mjs",
+      "needsInterop": false
+    },
+    "nprogress": {
+      "file": "/Users/commands/Desktop/WJW/code/MetaPro/docs/.vuepress/.cache/nprogress.js",
+      "src": "/Users/commands/Desktop/WJW/code/MetaPro/node_modules/nprogress/nprogress.js",
+      "needsInterop": true
+    },
+    "@vuepress/shared": {
+      "file": "/Users/commands/Desktop/WJW/code/MetaPro/docs/.vuepress/.cache/@vuepress_shared.js",
+      "src": "/Users/commands/Desktop/WJW/code/MetaPro/node_modules/@vuepress/shared/lib/esm/index.js",
+      "needsInterop": false
+    }
+  }
+}
