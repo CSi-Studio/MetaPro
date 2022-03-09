@@ -154,4 +154,4 @@ description: MetaPro README
 
 ## How to use
 
-[UserMantal](../guide/user-manual.md)
+[UserManual](../guide/user-manual.md)

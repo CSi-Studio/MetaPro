@@ -12,6 +12,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   theme: '@vuepress/theme-default',
   themeConfig: {
     logo: '/images/logo.png',
+    lastUpdated: false,
     // home: '/user-manual',
     repo: 'https://github.com/CSi-Studio/MetaPro',
     navbar: [
