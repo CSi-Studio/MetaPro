@@ -8,11 +8,11 @@ description: MetaPro User Manual
 
 ## Main Interface of MetaPro
 
-![](/images/image%20%281%29.png)
+![](/images/image_33.png)
 
 ## Framework of MetaPro
 
-![](/images/Figure%201.png)
+![](/images/image_34.png)
 
 ## Demo website
 
@@ -111,7 +111,7 @@ Here we use INSTALLATION_PATH to represent your installation path, for example `
 
   **Successful operation:**
   The following operations appear in the terminal to indicate that the operation is successful:
-  ![](/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-03-07%20114438.png)
+  ![](/images/win.png)
   **After successful startup, open a browser and connect to `localhost:8080`**
 
 - **stop:** Right click `MetaProStop.bat`, run as administrator
@@ -306,13 +306,13 @@ Introduction and download link of the file conversion software AirdPro is illust
 
 1. Open AirdPro file converter
    Open AirdPro by running AirdPro.exe in the installation directory. Users can create a desktop shortcut for easy access.
-   ![](/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-03-07%20152938.png)
+   ![](/images/image_39.png)
 2. Select files for conversion in DDA mode
-   ![](/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-03-07%20155523.png)
+   ![](/images/image_40.png)
 3. Select output folder
 4. Start Convert
    After file conversion, each MS file is converted to two converted files, end with .aird and .json.
-   ![](/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-03-07%20160557.png)
+   ![](/images/image_41.png)
    For example:
 
    ```纯文本
@@ -383,18 +383,18 @@ If you want to change the gradient of your experiment, for example, from 20min t
 #### 4.2.1 Load file
 
 1. Enter Project page, click `Create Project` at the top.
-   ![](/images/%E6%88%AA%E5%B1%8F2022-03-07%20%E4%B8%8B%E5%8D%883.59.03.png)
+   ![](/images/image_38.png)
    Then enter the `Project Name`. The project name should be the project name set in the **File directory arrangement** (section 4.1.1 Step 2). For example, if you set your project folder name as project-1, you need to name the `Project Name` as project-1.
    `Owner` and `Description` are optional, fill in according to the demand.
 2. Click `Scan Files` to scan all converted Aird format files under the project file
    ![](/images/scan.png)
    If MetaPro finds new files in the project folder, MetaPro will start to load the files and pop a message as follows:
 
-   ![](/images/%E6%88%AA%E5%B1%8F2022-03-03%2018.23.54.png)
+   ![](/images/image_37.png)
 
    If find no new file or the folder is empty, MetaPro will pop up the following prompt box:
 
-   ![](/images/%E6%88%AA%E5%B1%8F2022-03-03%2018.22.44.png)
+   ![](/images/image_36.png)
 
    The file scanning progress can be find at the Task page.
    You can view the loaded files by `List → Samples` or single click on the project name.
@@ -469,7 +469,7 @@ Enter project page and click on `QC` on the project that you want to view.
 
 This is the main inspection page on samples in a batch. It includes different function modules as labeled.
 
-![](/images/%E7%BB%98%E5%9B%BE1.png)
+![](/images/image_35.png)
 
 1. Overview switch module
    Click on the `Batch Name` or `Overview` dialog on the left top. You will see the following interface. You can change the current overview to another by clicking on a specific overview.

@@ -8,13 +8,13 @@ description: MetaPro README
 
 ## Framework
 
-![](/images/image%20%281%29.png)
+![](/images/image_33.png)
 
 ---
 
 ## Main Interface
 
-![](/images/Figure%201.png)
+![](/images/image_34.png)
 
 ---
 
@@ -154,4 +154,4 @@ description: MetaPro README
 
 ## How to use
 
-[UserManual](../guide/user-manual.md)
+[UserMantal](../guide/user-manual.md)

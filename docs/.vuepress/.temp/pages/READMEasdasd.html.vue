@@ -1,158 +1,379 @@
-<template><h1 id="user-manual" tabindex="-1"><a class="header-anchor" href="#user-manual" aria-hidden="true">#</a> User Manual</h1>
-<h2 id="main-interface-of-metapro" tabindex="-1"><a class="header-anchor" href="#main-interface-of-metapro" aria-hidden="true">#</a> Main Interface of MetaPro</h2>
-<p><img src="/images/image (1).png" alt=""></p>
-<h2 id="framework-of-metapro" tabindex="-1"><a class="header-anchor" href="#framework-of-metapro" aria-hidden="true">#</a> Framework of MetaPro</h2>
-<p><img src="/images/Figure 1.png" alt=""></p>
-<h2 id="demo-website" tabindex="-1"><a class="header-anchor" href="#demo-website" aria-hidden="true">#</a> Demo website</h2>
-<p><a href="http://47.88.77.176" target="_blank" rel="noopener noreferrer">http://47.88.77.176<ExternalLinkIcon/></a></p>
-<h2 id="_1-general-information" tabindex="-1"><a class="header-anchor" href="#_1-general-information" aria-hidden="true">#</a> 1 General Information</h2>
-<h3 id="_1-1-scope-of-metapro" tabindex="-1"><a class="header-anchor" href="#_1-1-scope-of-metapro" aria-hidden="true">#</a> 1.1 Scope of MetaPro</h3>
-<p>Currently mass spectrometry instruments are widely used in metabolomics studies, but software in this filed usually have a lack of easily executed batch inspection and spectra curation ability. Besides, collaboration inconvenience on data processing also restrict analysis on efficiency.</p>
-<p>MetaPro is a web-based stand-alone application for metabolomics MS data analysis, characterized by batch manual inspection and spectral library curation. MetaPro can perform accurate targeted compound detection on the input data and assure the result quality by batch manual inspection. Then, MetaPro can perform spectral library curation on the inspected results, which can improve the accuracy of further targeted analysis and promote the efficiency of manual inspection. The curated libraries and quantification results can be exported for further customized analysis.</p>
-<h3 id="_1-2-system-conception-description" tabindex="-1"><a class="header-anchor" href="#_1-2-system-conception-description" aria-hidden="true">#</a> <strong>1.2 System conception description</strong></h3>
-<p>In MetaPro, we provide these main base compositon moduels:</p>
-<p><code>Batch</code>, <code>Compound</code>, <code>Experiment</code>, <code>Library</code>, <code>Method</code>, <code>Overview</code>, <code>Project</code>, <code>Spectrum</code>, <code>Task</code>.</p>
-<p>The explanations for these base items are described below.</p>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Batch</td>
-<td>A batch is composed of some experimental files. A project can have a few batches.</td>
-</tr>
-<tr>
-<td>Compound</td>
-<td>A compound refers to a specific metabolite whose name, ID, m/z, RT and other information are stored in the database. Selected compounds could be used for conducting targeted analysis.</td>
-</tr>
-<tr>
-<td>Experiment</td>
-<td>An experiment is a basic analytical unit in the MetaPro. It represents the mass spectrometry data obtained from one sample. The actual storage mode of an experiment is an Aird format file under the user-defined document folder. A few experiments can be divided into one batch.</td>
-</tr>
-<tr>
-<td>Library</td>
-<td>A library contains a few compounds.</td>
-</tr>
-<tr>
-<td>Method</td>
-<td>All parameters used in the analysis steps are extracted into a method. Different parameters composition could be saved into different methods for convenient query.</td>
-</tr>
-<tr>
-<td>Overview</td>
-<td>An overview is the storage of the analyzed results. By checking a overview, multiple quality control operations can be achieved.</td>
-</tr>
-<tr>
-<td>Project</td>
-<td>A project can have a few batches. Each batch has a few experiments. Project is the largest unit where experiments could be organized.</td>
-</tr>
-<tr>
-<td>Spectrum</td>
-<td>A spectrum is correlated to a specific compound. Instrument type, collision energy, ionization mode and other description information of the mass spectrometry characteristics are stored in a spectrum.</td>
-</tr>
-<tr>
-<td>Task</td>
-<td>Task refers to a metabolomics analysis process needed to be done or undertaken. It’s timely status and records could be seen in the task page.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_1-3-data-restrictions" tabindex="-1"><a class="header-anchor" href="#_1-3-data-restrictions" aria-hidden="true">#</a> 1.3 Data restrictions</h3>
-<p>MetaPro currently only supports DDA mode data. The input for MetaPro should be converted vendor files (Aird files). The compound library should be given to the application in a specific format.</p>
-<h3 id="_1-4-data-safety" tabindex="-1"><a class="header-anchor" href="#_1-4-data-safety" aria-hidden="true">#</a> 1.4 Data safety</h3>
-<p>MetaPro is a stand-alone application that can be deployed on your personal computer or high-performance server. All data will be saved on your local devices and will not be uploaded.</p>
-<h3 id="_1-5-contact-us" tabindex="-1"><a class="header-anchor" href="#_1-5-contact-us" aria-hidden="true">#</a> 1.5 Contact us</h3>
-<p>If you have any questions, you can or contact us through Github or csi@csibio.net.</p>
-<h2 id="_2-installation" tabindex="-1"><a class="header-anchor" href="#_2-installation" aria-hidden="true">#</a> 2 Installation</h2>
-<h3 id="_2-1-system-and-hardware-requirements" tabindex="-1"><a class="header-anchor" href="#_2-1-system-and-hardware-requirements" aria-hidden="true">#</a> 2.1 System and hardware requirements</h3>
-<p>MetaPro is available for Windows 7 (or above), Linux and MacOS. The minimum and recommended system specifications are described in the following t5able.</p>
-<table>
-<thead>
-<tr>
-<th><strong>Specifications</strong></th>
-<th><strong>Minimum</strong></th>
-<th><strong>Recommended</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CPU</td>
-<td>Intel Core i5 10-gen or AMD R5</td>
-<td>Intel Core i9 12-gen or AMD R9 5900</td>
-</tr>
-<tr>
-<td>Hard drive</td>
-<td>50GB free space</td>
-<td>2x data set size</td>
-</tr>
-<tr>
-<td>RAM</td>
-<td>16GB</td>
-<td>64GB(Core i9-10gen), 128GB(Core i9-12gen)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_2-2-download" tabindex="-1"><a class="header-anchor" href="#_2-2-download" aria-hidden="true">#</a> 2.2 Download</h3>
-<p><strong>MetaPro</strong></p>
-<p>Installation packages for all the supported systems can be downloaded at <a href="https://github.com/CSi-Studio/MetaPro/releases/tag/v1.1.8" target="_blank" rel="noopener noreferrer">GitHub<ExternalLinkIcon/></a>.</p>
-<p><strong>AirdPro</strong></p>
-<p>MetaPro uses AirdPro for Vendor MS file conversion.</p>
-<p>AirdPro (version 1.1.0.0) can be freely downloaded at <a href="https://github.com/CSi-Studio/AirdPro/releases/tag/1.1" target="_blank" rel="noopener noreferrer">GitHub<ExternalLinkIcon/></a>.</p>
-<p><strong>Tutorial data</strong></p>
-<p>The tutorial data is a public metabolomics software benchmark dataset, published in <a href="https://doi.org/10.1016/j.aca.2018.05.001" target="_blank" rel="noopener noreferrer">Li, Zhucui, et al.<ExternalLinkIcon/></a></p>
-<p>You can download the tutorial data at <a href="https://drive.google.com/drive/folders/1_FAFca5LlqhFWv6U1-UzU9OkqPvGRsBI?usp=sharing" target="_blank" rel="noopener noreferrer">GoogleDrive<ExternalLinkIcon/></a> and <a href="https://1drv.ms/u/s!AqS3L_kdjWbKgp43W1l8-GteFvv6ZQ?e=xukUkb" target="_blank" rel="noopener noreferrer">OneDrive<ExternalLinkIcon/></a>.</p>
-<p>The data contains 2 datasets:</p>
-<ul>
-<li><strong>TripleTOF dataset</strong>
-<ul>
-<li>8 converted instrument data (16 files)</li>
-<li>2 library (internal standard library, analyte library)</li>
-</ul>
-</li>
-<li><strong>QE HF dataset</strong>
-<ul>
-<li>10 converted instrument data (20 files)</li>
-<li>2 library (internal standard library, analyte library)</li>
-</ul>
-</li>
-</ul>
-<h3 id="_2-3-one-click-installation" tabindex="-1"><a class="header-anchor" href="#_2-3-one-click-installation" aria-hidden="true">#</a> 2.3 One-click installation</h3>
-<p>Extract MetaPro zip file to any directory you want.</p>
-<p>Here we use INSTALLATION_PATH to represent your installation path, for example <code>C:\</code></p>
-<h4 id="windows" tabindex="-1"><a class="header-anchor" href="#windows" aria-hidden="true">#</a> <strong>Windows</strong></h4>
-<ul>
-<li>
-<p>Open INSTALLATION_PATH folder</p>
-</li>
-<li>
-<p><strong>start:</strong> Right click <code>MetaProStart.bat</code>, run as administrator.</p>
-<p><strong>Successful operation:</strong>
-The following operations appear in the terminal to indicate that the operation is successful:
-<img src="/images/屏幕截图 2022-03-07 114438.png" alt="">
-<strong>After successful startup, open a browser and connect to <code>localhost:8080</code></strong></p>
-</li>
-<li>
-<p><strong>stop:</strong> Right click <code>MetaProStop.bat</code>, run as administrator</p>
-</li>
-<li>
-<p><strong>uninstall:</strong> Stop MetaPro and delete the installation folder.</p>
-</li>
-</ul>
-<h4 id="macos" tabindex="-1"><a class="header-anchor" href="#macos" aria-hidden="true">#</a> <strong>MacOS</strong></h4>
-<ul>
-<li>Open a terminal</li>
-</ul>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>cd INSTALLATION_PATH
+<template>
+  <h1 id="user-manual" tabindex="-1">
+    <a class="header-anchor" href="#user-manual" aria-hidden="true">#</a> User
+    Manual
+  </h1>
+  <h2 id="main-interface-of-metapro" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#main-interface-of-metapro"
+      aria-hidden="true"
+      >#</a
+    >
+    Main Interface of MetaPro
+  </h2>
+  <p><img src="/images/image_33.png" alt="" /></p>
+  <h2 id="framework-of-metapro" tabindex="-1">
+    <a class="header-anchor" href="#framework-of-metapro" aria-hidden="true"
+      >#</a
+    >
+    Framework of MetaPro
+  </h2>
+  <p><img src="/images/image_34.png" alt="" /></p>
+  <h2 id="demo-website" tabindex="-1">
+    <a class="header-anchor" href="#demo-website" aria-hidden="true">#</a> Demo
+    website
+  </h2>
+  <p>
+    <a href="http://47.88.77.176" target="_blank" rel="noopener noreferrer"
+      >http://47.88.77.176<ExternalLinkIcon
+    /></a>
+  </p>
+  <h2 id="_1-general-information" tabindex="-1">
+    <a class="header-anchor" href="#_1-general-information" aria-hidden="true"
+      >#</a
+    >
+    1 General Information
+  </h2>
+  <h3 id="_1-1-scope-of-metapro" tabindex="-1">
+    <a class="header-anchor" href="#_1-1-scope-of-metapro" aria-hidden="true"
+      >#</a
+    >
+    1.1 Scope of MetaPro
+  </h3>
+  <p>
+    Currently mass spectrometry instruments are widely used in metabolomics
+    studies, but software in this filed usually have a lack of easily executed
+    batch inspection and spectra curation ability. Besides, collaboration
+    inconvenience on data processing also restrict analysis on efficiency.
+  </p>
+  <p>
+    MetaPro is a web-based stand-alone application for metabolomics MS data
+    analysis, characterized by batch manual inspection and spectral library
+    curation. MetaPro can perform accurate targeted compound detection on the
+    input data and assure the result quality by batch manual inspection. Then,
+    MetaPro can perform spectral library curation on the inspected results,
+    which can improve the accuracy of further targeted analysis and promote the
+    efficiency of manual inspection. The curated libraries and quantification
+    results can be exported for further customized analysis.
+  </p>
+  <h3 id="_1-2-system-conception-description" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_1-2-system-conception-description"
+      aria-hidden="true"
+      >#</a
+    >
+    <strong>1.2 System conception description</strong>
+  </h3>
+  <p>In MetaPro, we provide these main base compositon moduels:</p>
+  <p>
+    <code>Batch</code>, <code>Compound</code>, <code>Experiment</code>,
+    <code>Library</code>, <code>Method</code>, <code>Overview</code>,
+    <code>Project</code>, <code>Spectrum</code>, <code>Task</code>.
+  </p>
+  <p>The explanations for these base items are described below.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Batch</td>
+        <td>
+          A batch is composed of some experimental files. A project can have a
+          few batches.
+        </td>
+      </tr>
+      <tr>
+        <td>Compound</td>
+        <td>
+          A compound refers to a specific metabolite whose name, ID, m/z, RT and
+          other information are stored in the database. Selected compounds could
+          be used for conducting targeted analysis.
+        </td>
+      </tr>
+      <tr>
+        <td>Experiment</td>
+        <td>
+          An experiment is a basic analytical unit in the MetaPro. It represents
+          the mass spectrometry data obtained from one sample. The actual
+          storage mode of an experiment is an Aird format file under the
+          user-defined document folder. A few experiments can be divided into
+          one batch.
+        </td>
+      </tr>
+      <tr>
+        <td>Library</td>
+        <td>A library contains a few compounds.</td>
+      </tr>
+      <tr>
+        <td>Method</td>
+        <td>
+          All parameters used in the analysis steps are extracted into a method.
+          Different parameters composition could be saved into different methods
+          for convenient query.
+        </td>
+      </tr>
+      <tr>
+        <td>Overview</td>
+        <td>
+          An overview is the storage of the analyzed results. By checking a
+          overview, multiple quality control operations can be achieved.
+        </td>
+      </tr>
+      <tr>
+        <td>Project</td>
+        <td>
+          A project can have a few batches. Each batch has a few experiments.
+          Project is the largest unit where experiments could be organized.
+        </td>
+      </tr>
+      <tr>
+        <td>Spectrum</td>
+        <td>
+          A spectrum is correlated to a specific compound. Instrument type,
+          collision energy, ionization mode and other description information of
+          the mass spectrometry characteristics are stored in a spectrum.
+        </td>
+      </tr>
+      <tr>
+        <td>Task</td>
+        <td>
+          Task refers to a metabolomics analysis process needed to be done or
+          undertaken. It’s timely status and records could be seen in the task
+          page.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="_1-3-data-restrictions" tabindex="-1">
+    <a class="header-anchor" href="#_1-3-data-restrictions" aria-hidden="true"
+      >#</a
+    >
+    1.3 Data restrictions
+  </h3>
+  <p>
+    MetaPro currently only supports DDA mode data. The input for MetaPro should
+    be converted vendor files (Aird files). The compound library should be given
+    to the application in a specific format.
+  </p>
+  <h3 id="_1-4-data-safety" tabindex="-1">
+    <a class="header-anchor" href="#_1-4-data-safety" aria-hidden="true">#</a>
+    1.4 Data safety
+  </h3>
+  <p>
+    MetaPro is a stand-alone application that can be deployed on your personal
+    computer or high-performance server. All data will be saved on your local
+    devices and will not be uploaded.
+  </p>
+  <h3 id="_1-5-contact-us" tabindex="-1">
+    <a class="header-anchor" href="#_1-5-contact-us" aria-hidden="true">#</a>
+    1.5 Contact us
+  </h3>
+  <p>
+    If you have any questions, you can or contact us through Github or
+    csi@csibio.net.
+  </p>
+  <h2 id="_2-installation" tabindex="-1">
+    <a class="header-anchor" href="#_2-installation" aria-hidden="true">#</a> 2
+    Installation
+  </h2>
+  <h3 id="_2-1-system-and-hardware-requirements" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_2-1-system-and-hardware-requirements"
+      aria-hidden="true"
+      >#</a
+    >
+    2.1 System and hardware requirements
+  </h3>
+  <p>
+    MetaPro is available for Windows 7 (or above), Linux and MacOS. The minimum
+    and recommended system specifications are described in the following t5able.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th><strong>Specifications</strong></th>
+        <th><strong>Minimum</strong></th>
+        <th><strong>Recommended</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CPU</td>
+        <td>Intel Core i5 10-gen or AMD R5</td>
+        <td>Intel Core i9 12-gen or AMD R9 5900</td>
+      </tr>
+      <tr>
+        <td>Hard drive</td>
+        <td>50GB free space</td>
+        <td>2x data set size</td>
+      </tr>
+      <tr>
+        <td>RAM</td>
+        <td>16GB</td>
+        <td>64GB(Core i9-10gen), 128GB(Core i9-12gen)</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="_2-2-download" tabindex="-1">
+    <a class="header-anchor" href="#_2-2-download" aria-hidden="true">#</a> 2.2
+    Download
+  </h3>
+  <p><strong>MetaPro</strong></p>
+  <p>
+    Installation packages for all the supported systems can be downloaded at
+    <a
+      href="https://github.com/CSi-Studio/MetaPro/releases/tag/v1.1.8"
+      target="_blank"
+      rel="noopener noreferrer"
+      >GitHub<ExternalLinkIcon /></a
+    >.
+  </p>
+  <p><strong>AirdPro</strong></p>
+  <p>MetaPro uses AirdPro for Vendor MS file conversion.</p>
+  <p>
+    AirdPro (version 1.1.0.0) can be freely downloaded at
+    <a
+      href="https://github.com/CSi-Studio/AirdPro/releases/tag/1.1"
+      target="_blank"
+      rel="noopener noreferrer"
+      >GitHub<ExternalLinkIcon /></a
+    >.
+  </p>
+  <p><strong>Tutorial data</strong></p>
+  <p>
+    The tutorial data is a public metabolomics software benchmark dataset,
+    published in
+    <a
+      href="https://doi.org/10.1016/j.aca.2018.05.001"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Li, Zhucui, et al.<ExternalLinkIcon
+    /></a>
+  </p>
+  <p>
+    You can download the tutorial data at
+    <a
+      href="https://drive.google.com/drive/folders/1_FAFca5LlqhFWv6U1-UzU9OkqPvGRsBI?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      >GoogleDrive<ExternalLinkIcon
+    /></a>
+    and
+    <a
+      href="https://1drv.ms/u/s!AqS3L_kdjWbKgp43W1l8-GteFvv6ZQ?e=xukUkb"
+      target="_blank"
+      rel="noopener noreferrer"
+      >OneDrive<ExternalLinkIcon /></a
+    >.
+  </p>
+  <p>The data contains 2 datasets:</p>
+  <ul>
+    <li>
+      <strong>TripleTOF dataset</strong>
+      <ul>
+        <li>8 converted instrument data (16 files)</li>
+        <li>2 library (internal standard library, analyte library)</li>
+      </ul>
+    </li>
+    <li>
+      <strong>QE HF dataset</strong>
+      <ul>
+        <li>10 converted instrument data (20 files)</li>
+        <li>2 library (internal standard library, analyte library)</li>
+      </ul>
+    </li>
+  </ul>
+  <h3 id="_2-3-one-click-installation" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_2-3-one-click-installation"
+      aria-hidden="true"
+      >#</a
+    >
+    2.3 One-click installation
+  </h3>
+  <p>Extract MetaPro zip file to any directory you want.</p>
+  <p>
+    Here we use INSTALLATION_PATH to represent your installation path, for
+    example <code>C:\</code>
+  </p>
+  <h4 id="windows" tabindex="-1">
+    <a class="header-anchor" href="#windows" aria-hidden="true">#</a>
+    <strong>Windows</strong>
+  </h4>
+  <ul>
+    <li>
+      <p>Open INSTALLATION_PATH folder</p>
+    </li>
+    <li>
+      <p>
+        <strong>start:</strong> Right click <code>MetaProStart.bat</code>, run
+        as administrator.
+      </p>
+      <p>
+        <strong>Successful operation:</strong>
+        The following operations appear in the terminal to indicate that the
+        operation is successful:
+        <img src="/images/屏幕截图 2022-03-07 114438.png" alt="" />
+        <strong
+          >After successful startup, open a browser and connect to
+          <code>localhost:8080</code></strong
+        >
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>stop:</strong> Right click <code>MetaProStop.bat</code>, run as
+        administrator
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>uninstall:</strong> Stop MetaPro and delete the installation
+        folder.
+      </p>
+    </li>
+  </ul>
+  <h4 id="macos" tabindex="-1">
+    <a class="header-anchor" href="#macos" aria-hidden="true">#</a>
+    <strong>MacOS</strong>
+  </h4>
+  <ul>
+    <li>Open a terminal</li>
+  </ul>
+  <div class="language-text ext-text line-numbers-mode">
+    <pre v-pre class="language-text"><code>cd INSTALLATION_PATH
 cd MetaproForMac
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul>
-<li><strong>start:</strong></li>
-</ul>
-<div class="language-Bash ext-Bash line-numbers-mode"><pre v-pre class="language-Bash"><code>bash MetaproStart.sh
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><p><strong>Successful operation:</strong></p>
-<p>The following operations appear in the terminal to indicate that the operation is successful:</p>
-<div class="language-Bash ext-Bash line-numbers-mode"><pre v-pre class="language-Bash"><code>$ bash ./MetaproStart.sh
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br /><span class="line-number">2</span
+      ><br />
+    </div>
+  </div>
+  <ul>
+    <li><strong>start:</strong></li>
+  </ul>
+  <div class="language-Bash ext-Bash line-numbers-mode">
+    <pre v-pre class="language-Bash"><code>bash MetaproStart.sh
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br />
+    </div>
+  </div>
+  <p><strong>Successful operation:</strong></p>
+  <p>
+    The following operations appear in the terminal to indicate that the
+    operation is successful:
+  </p>
+  <div class="language-Bash ext-Bash line-numbers-mode">
+    <pre v-pre class="language-Bash"><code>$ bash ./MetaproStart.sh
 /Users/commands/MetaproForMac
 ********* Start Redis *********
 /Users/commands/MetaproForMac/redis
@@ -164,27 +385,77 @@ forked process: 94332
 
 $ child process started successfully, parent exiting
 
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>After successful startup, open a browser and connect to <code>localhost:8080</code></strong></p>
-<ul>
-<li><strong>stop:</strong></li>
-</ul>
-<div class="language-Bash ext-Bash line-numbers-mode"><pre v-pre class="language-Bash"><code>bash MetaproStop.sh
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><ul>
-<li><strong>uninstall:</strong> Stop MetaPro and delete the installation folder.</li>
-</ul>
-<h4 id="linux" tabindex="-1"><a class="header-anchor" href="#linux" aria-hidden="true">#</a> <strong>Linux</strong></h4>
-<ul>
-<li>Open a terminal</li>
-</ul>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>cd INSTALLATION_PATH
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br /><span class="line-number">2</span
+      ><br /><span class="line-number">3</span><br /><span class="line-number"
+        >4</span
+      ><br /><span class="line-number">5</span><br /><span class="line-number"
+        >6</span
+      ><br /><span class="line-number">7</span><br /><span class="line-number"
+        >8</span
+      ><br /><span class="line-number">9</span><br /><span class="line-number"
+        >10</span
+      ><br /><span class="line-number">11</span><br /><span class="line-number"
+        >12</span
+      ><br />
+    </div>
+  </div>
+  <p>
+    <strong
+      >After successful startup, open a browser and connect to
+      <code>localhost:8080</code></strong
+    >
+  </p>
+  <ul>
+    <li><strong>stop:</strong></li>
+  </ul>
+  <div class="language-Bash ext-Bash line-numbers-mode">
+    <pre v-pre class="language-Bash"><code>bash MetaproStop.sh
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br />
+    </div>
+  </div>
+  <ul>
+    <li>
+      <strong>uninstall:</strong> Stop MetaPro and delete the installation
+      folder.
+    </li>
+  </ul>
+  <h4 id="linux" tabindex="-1">
+    <a class="header-anchor" href="#linux" aria-hidden="true">#</a>
+    <strong>Linux</strong>
+  </h4>
+  <ul>
+    <li>Open a terminal</li>
+  </ul>
+  <div class="language-text ext-text line-numbers-mode">
+    <pre v-pre class="language-text"><code>cd INSTALLATION_PATH
 cd MetaproForUbuntu
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul>
-<li><strong>start</strong>:</li>
-</ul>
-<div class="language-Bash ext-Bash line-numbers-mode"><pre v-pre class="language-Bash"><code>bash MetaproStart.sh
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><p><strong>Successful operation:</strong></p>
-<p>The following operations appear in the terminal to indicate that the operation is successful:</p>
-<div class="language-Bash ext-Bash line-numbers-mode"><pre v-pre class="language-Bash"><code>$ bash ./MetaproStart.sh
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br /><span class="line-number">2</span
+      ><br />
+    </div>
+  </div>
+  <ul>
+    <li><strong>start</strong>:</li>
+  </ul>
+  <div class="language-Bash ext-Bash line-numbers-mode">
+    <pre v-pre class="language-Bash"><code>bash MetaproStart.sh
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br />
+    </div>
+  </div>
+  <p><strong>Successful operation:</strong></p>
+  <p>
+    The following operations appear in the terminal to indicate that the
+    operation is successful:
+  </p>
+  <div class="language-Bash ext-Bash line-numbers-mode">
+    <pre v-pre class="language-Bash"><code>$ bash ./MetaproStart.sh
 /home/commands/MetaproForMac
 ********* Start Redis *********
 /home/commands/MetaproForMac/redis
@@ -196,24 +467,80 @@ forked process: 94332
 
 $ child process started successfully, parent exiting
 
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>After successful startup, open a browser and connect to<code>localhost:8080</code></strong></p>
-<ul>
-<li><strong>stop</strong>:</li>
-</ul>
-<div class="language-Bash ext-Bash line-numbers-mode"><pre v-pre class="language-Bash"><code>bash MetaproStop.sh
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><ul>
-<li><strong>uninstall</strong>: Stop MetaPro and delete the installation folder.</li>
-</ul>
-<p><strong>After successful startup, open the browser to enter: <code>localhost:8080</code>, enter MetaPro interface.</strong></p>
-<p><strong>Browsers support:</strong> Modern browsers and IE11: IE11, Edge, Firefox, Chrome, Safari, Opera</p>
-<h3 id="_2-4-configuration" tabindex="-1"><a class="header-anchor" href="#_2-4-configuration" aria-hidden="true">#</a> 2.4 Configuration</h3>
-<p>There are two important parameters in the configuration of MetaPro. The <strong>analysis data directory</strong> and the <strong>result export directory</strong>.</p>
-<p>Analysis data directory</p>
-<p>All files that need to be analyzed by MetaPro need to be placed under the analysis data directory according to the rules in section 4.1.1. MetaPro can quickly import multiple batches of experiments by monitoring the converted files in the <strong>analysis data directory.</strong>
-All results that need to be exported by MetaPro will be exported to the <strong>result export directory</strong>.</p>
-<p>Both directories are automatically set during the installation process. Users can modify the path according to their requirements.</p>
-<p>Default directories are summarized as follows:</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>[Windows]
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br /><span class="line-number">2</span
+      ><br /><span class="line-number">3</span><br /><span class="line-number"
+        >4</span
+      ><br /><span class="line-number">5</span><br /><span class="line-number"
+        >6</span
+      ><br /><span class="line-number">7</span><br /><span class="line-number"
+        >8</span
+      ><br /><span class="line-number">9</span><br /><span class="line-number"
+        >10</span
+      ><br /><span class="line-number">11</span><br /><span class="line-number"
+        >12</span
+      ><br />
+    </div>
+  </div>
+  <p>
+    <strong
+      >After successful startup, open a browser and connect to<code
+        >localhost:8080</code
+      ></strong
+    >
+  </p>
+  <ul>
+    <li><strong>stop</strong>:</li>
+  </ul>
+  <div class="language-Bash ext-Bash line-numbers-mode">
+    <pre v-pre class="language-Bash"><code>bash MetaproStop.sh
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br />
+    </div>
+  </div>
+  <ul>
+    <li>
+      <strong>uninstall</strong>: Stop MetaPro and delete the installation
+      folder.
+    </li>
+  </ul>
+  <p>
+    <strong
+      >After successful startup, open the browser to enter:
+      <code>localhost:8080</code>, enter MetaPro interface.</strong
+    >
+  </p>
+  <p>
+    <strong>Browsers support:</strong> Modern browsers and IE11: IE11, Edge,
+    Firefox, Chrome, Safari, Opera
+  </p>
+  <h3 id="_2-4-configuration" tabindex="-1">
+    <a class="header-anchor" href="#_2-4-configuration" aria-hidden="true">#</a>
+    2.4 Configuration
+  </h3>
+  <p>
+    There are two important parameters in the configuration of MetaPro. The
+    <strong>analysis data directory</strong> and the
+    <strong>result export directory</strong>.
+  </p>
+  <p>Analysis data directory</p>
+  <p>
+    All files that need to be analyzed by MetaPro need to be placed under the
+    analysis data directory according to the rules in section 4.1.1. MetaPro can
+    quickly import multiple batches of experiments by monitoring the converted
+    files in the <strong>analysis data directory.</strong> All results that need
+    to be exported by MetaPro will be exported to the
+    <strong>result export directory</strong>.
+  </p>
+  <p>
+    Both directories are automatically set during the installation process.
+    Users can modify the path according to their requirements.
+  </p>
+  <p>Default directories are summarized as follows:</p>
+  <div class="language-text ext-text line-numbers-mode">
+    <pre v-pre class="language-text"><code>[Windows]
 # default analysis data directory
 C://metapro//data
 # default result export directory
@@ -231,71 +558,261 @@ C://metapro//export
 # default result export directory
 /home/$USER/metapro/export
 
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>The way of changing default parameters is as follows:</p>
-<ol>
-<li>Open the <code>config.properties</code> file in the installation directory of MetaPro.</li>
-<li>Change the value of <code>directory</code> and <code>export</code>. <code>directory</code> is the analysis data directory and <code>export</code> is the result export directory.</li>
-<li>Restart MetaPro.</li>
-</ol>
-<h3 id="_2-5-associated-software" tabindex="-1"><a class="header-anchor" href="#_2-5-associated-software" aria-hidden="true">#</a> 2.5 Associated software</h3>
-<p><strong>AirdPro</strong></p>
-<p>AirdPro (version 1.1.0.0) can be freely downloaded at <a href="https://github.com/CSi-Studio/AirdPro/releases/tag/1.1" target="_blank" rel="noopener noreferrer">GitHub<ExternalLinkIcon/></a>.</p>
-<p>MetaPro uses AirdPro (version 1.1.0.0) for instrument vendor file conversion. Instrument data should be converted to Aird format (.aird, .json) before being loaded into MetaPro. Aird is a computational-oriented data format for rapid access of MS data. By rearranging, compressing, and indexing spectra data, Aird can significantly speed up data reading, and thus improve the efficiency of data analysis and inspection.</p>
-<p>AirdPro supports the vendor files including <strong>.raw, .wiff and .d</strong> formats.</p>
-<p>AirdPro runs on Windows system, limited by the system requirement of vendor APIs.</p>
-<h2 id="_3-page-introduction" tabindex="-1"><a class="header-anchor" href="#_3-page-introduction" aria-hidden="true">#</a> 3 Page Introduction</h2>
-<h3 id="_3-1-project-management-page" tabindex="-1"><a class="header-anchor" href="#_3-1-project-management-page" aria-hidden="true">#</a> 3.1 Project management page</h3>
-<p><img src="/images/image.png" alt=""></p>
-<p>This is the first page that users will see when they start the system. Users can create new projects by clicking on the Create Project button in the top column. Then, input the name, owner, and description information of the new project on this page, where delete, update and search options are also available. The project management page shows all the users’ projects and their additional information, including batch numbers, experiment numbers, overview numbers, owner and create date. Storage space is shown with saved space because the use of Aird data format.
-To add experimental files into a project, users need to categorize all the Aird files into a folder having the same name with the created project. The folder should be put under the repository of MetaPro. This folder must contain several sub-folders, which are considered to be batches under this project. Aird files must be put under the sub-folders rather than the folder having the same name with the created project. Subsequently, these Aird files and batches information can be read into the system through clicking on the &quot;scan file&quot; button. During this process, their brief information will be stored. Meanwhile, batch number and experiment number are automatically modified according to the actual file arrangement under the repository. Also, Users can check extracted ion chromatogram (EIC) in each experiment after the index is created in the system.
-Clicking on the selected project will get access to its detailed information page, where its experiments information are fully displayed. Here, the experiment information is able to be updated, deleted, and modified.
-​</p>
-<h3 id="_3-2-library-management-page" tabindex="-1"><a class="header-anchor" href="#_3-2-library-management-page" aria-hidden="true">#</a> 3.2 Library management page</h3>
-<p><img src="/images/image_1.png" alt=""></p>
-<p>This page has the similar visualization hierarchical to the project management page. Creating, updating, modifying, deleting options toward compound libraries are available here. When creating a new library, MetaPro allows users to upload a formatted CSV file to fill the compounds information in this library. Clicking a library can check all the compounds that are included in this library.
-​</p>
-<h3 id="_3-3-method-management-page" tabindex="-1"><a class="header-anchor" href="#_3-3-method-management-page" aria-hidden="true">#</a> 3.3 Method management page</h3>
-<p><img src="/images/image_2.png" alt=""></p>
-<p>The contents shown here are the clustered parameters, which we call methods. When creating a new method, recommended parameters are preset in the method template. Noteworthy, created methods can be used to various projects, batches and experimental files. This design makes it easy to check parameter settings among different projects. Creating, viewing, deleting and modifying methods are operated on this page.​</p>
-<h3 id="_3-4-task-management-page" tabindex="-1"><a class="header-anchor" href="#_3-4-task-management-page" aria-hidden="true">#</a> 3.4 Task management page</h3>
-<p><img src="/images/image_3.png" alt=""></p>
-<p>Task page presents the progress of <code>BUILD_LIBRARY</code> <code>SCAN_AND_UPDATE_EXPERIMENTS</code>. Users can check their execution status on this page. The execution log of each task can be viewed by clicking on the <code>+</code> button on each row. Time cost, created time, and updated dates are displayed for each task.</p>
-<h2 id="_4-step-by-step-instructions" tabindex="-1"><a class="header-anchor" href="#_4-step-by-step-instructions" aria-hidden="true">#</a> 4 Step by step instructions</h2>
-<h3 id="_4-1-data-preparation" tabindex="-1"><a class="header-anchor" href="#_4-1-data-preparation" aria-hidden="true">#</a> 4.1 Data preparation</h3>
-<h4 id="_4-1-1-ms-file-preparation" tabindex="-1"><a class="header-anchor" href="#_4-1-1-ms-file-preparation" aria-hidden="true">#</a> 4.1.1 MS file preparation</h4>
-<p><strong>Step 1: File Conversion</strong></p>
-<p>MetaPro supports MS data acquired with the data-dependent acquisition (DDA) method. Vendor MS data should be converted to Aird format (.aird &amp; .json) before being loaded into MetaPro.</p>
-<p>Introduction and download link of the file conversion software AirdPro is illustrated above in section 2.5.</p>
-<ol>
-<li>
-<p>Open AirdPro file converter
-Open AirdPro by running AirdPro.exe in the installation directory. Users can create a desktop shortcut for easy access.
-<img src="/images/屏幕截图 2022-03-07 152938.png" alt=""></p>
-</li>
-<li>
-<p>Select files for conversion in DDA mode
-<img src="/images/屏幕截图 2022-03-07 155523.png" alt=""></p>
-</li>
-<li>
-<p>Select output folder</p>
-</li>
-<li>
-<p>Start Convert
-After file conversion, each MS file is converted to two converted files, end with .aird and .json.
-<img src="/images/屏幕截图 2022-03-07 160557.png" alt="">
-For example:</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code># Thermo file
+</code></pre>
+    <div class="line-numbers" aria-hidden="true">
+      <span class="line-number">1</span><br /><span class="line-number">2</span
+      ><br /><span class="line-number">3</span><br /><span class="line-number"
+        >4</span
+      ><br /><span class="line-number">5</span><br /><span class="line-number"
+        >6</span
+      ><br /><span class="line-number">7</span><br /><span class="line-number"
+        >8</span
+      ><br /><span class="line-number">9</span><br /><span class="line-number"
+        >10</span
+      ><br /><span class="line-number">11</span><br /><span class="line-number"
+        >12</span
+      ><br /><span class="line-number">13</span><br /><span class="line-number"
+        >14</span
+      ><br /><span class="line-number">15</span><br /><span class="line-number"
+        >16</span
+      ><br /><span class="line-number">17</span><br /><span class="line-number"
+        >18</span
+      ><br />
+    </div>
+  </div>
+  <p>The way of changing default parameters is as follows:</p>
+  <ol>
+    <li>
+      Open the <code>config.properties</code> file in the installation directory
+      of MetaPro.
+    </li>
+    <li>
+      Change the value of <code>directory</code> and <code>export</code>.
+      <code>directory</code> is the analysis data directory and
+      <code>export</code> is the result export directory.
+    </li>
+    <li>Restart MetaPro.</li>
+  </ol>
+  <h3 id="_2-5-associated-software" tabindex="-1">
+    <a class="header-anchor" href="#_2-5-associated-software" aria-hidden="true"
+      >#</a
+    >
+    2.5 Associated software
+  </h3>
+  <p><strong>AirdPro</strong></p>
+  <p>
+    AirdPro (version 1.1.0.0) can be freely downloaded at
+    <a
+      href="https://github.com/CSi-Studio/AirdPro/releases/tag/1.1"
+      target="_blank"
+      rel="noopener noreferrer"
+      >GitHub<ExternalLinkIcon /></a
+    >.
+  </p>
+  <p>
+    MetaPro uses AirdPro (version 1.1.0.0) for instrument vendor file
+    conversion. Instrument data should be converted to Aird format (.aird,
+    .json) before being loaded into MetaPro. Aird is a computational-oriented
+    data format for rapid access of MS data. By rearranging, compressing, and
+    indexing spectra data, Aird can significantly speed up data reading, and
+    thus improve the efficiency of data analysis and inspection.
+  </p>
+  <p>
+    AirdPro supports the vendor files including
+    <strong>.raw, .wiff and .d</strong> formats.
+  </p>
+  <p>
+    AirdPro runs on Windows system, limited by the system requirement of vendor
+    APIs.
+  </p>
+  <h2 id="_3-page-introduction" tabindex="-1">
+    <a class="header-anchor" href="#_3-page-introduction" aria-hidden="true"
+      >#</a
+    >
+    3 Page Introduction
+  </h2>
+  <h3 id="_3-1-project-management-page" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_3-1-project-management-page"
+      aria-hidden="true"
+      >#</a
+    >
+    3.1 Project management page
+  </h3>
+  <p><img src="/images/image.png" alt="" /></p>
+  <p>
+    This is the first page that users will see when they start the system. Users
+    can create new projects by clicking on the Create Project button in the top
+    column. Then, input the name, owner, and description information of the new
+    project on this page, where delete, update and search options are also
+    available. The project management page shows all the users’ projects and
+    their additional information, including batch numbers, experiment numbers,
+    overview numbers, owner and create date. Storage space is shown with saved
+    space because the use of Aird data format. To add experimental files into a
+    project, users need to categorize all the Aird files into a folder having
+    the same name with the created project. The folder should be put under the
+    repository of MetaPro. This folder must contain several sub-folders, which
+    are considered to be batches under this project. Aird files must be put
+    under the sub-folders rather than the folder having the same name with the
+    created project. Subsequently, these Aird files and batches information can
+    be read into the system through clicking on the &quot;scan file&quot;
+    button. During this process, their brief information will be stored.
+    Meanwhile, batch number and experiment number are automatically modified
+    according to the actual file arrangement under the repository. Also, Users
+    can check extracted ion chromatogram (EIC) in each experiment after the
+    index is created in the system. Clicking on the selected project will get
+    access to its detailed information page, where its experiments information
+    are fully displayed. Here, the experiment information is able to be updated,
+    deleted, and modified. ​
+  </p>
+  <h3 id="_3-2-library-management-page" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_3-2-library-management-page"
+      aria-hidden="true"
+      >#</a
+    >
+    3.2 Library management page
+  </h3>
+  <p><img src="/images/image_1.png" alt="" /></p>
+  <p>
+    This page has the similar visualization hierarchical to the project
+    management page. Creating, updating, modifying, deleting options toward
+    compound libraries are available here. When creating a new library, MetaPro
+    allows users to upload a formatted CSV file to fill the compounds
+    information in this library. Clicking a library can check all the compounds
+    that are included in this library. ​
+  </p>
+  <h3 id="_3-3-method-management-page" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_3-3-method-management-page"
+      aria-hidden="true"
+      >#</a
+    >
+    3.3 Method management page
+  </h3>
+  <p><img src="/images/image_2.png" alt="" /></p>
+  <p>
+    The contents shown here are the clustered parameters, which we call methods.
+    When creating a new method, recommended parameters are preset in the method
+    template. Noteworthy, created methods can be used to various projects,
+    batches and experimental files. This design makes it easy to check parameter
+    settings among different projects. Creating, viewing, deleting and modifying
+    methods are operated on this page.​
+  </p>
+  <h3 id="_3-4-task-management-page" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_3-4-task-management-page"
+      aria-hidden="true"
+      >#</a
+    >
+    3.4 Task management page
+  </h3>
+  <p><img src="/images/image_3.png" alt="" /></p>
+  <p>
+    Task page presents the progress of <code>BUILD_LIBRARY</code>
+    <code>SCAN_AND_UPDATE_EXPERIMENTS</code>. Users can check their execution
+    status on this page. The execution log of each task can be viewed by
+    clicking on the <code>+</code> button on each row. Time cost, created time,
+    and updated dates are displayed for each task.
+  </p>
+  <h2 id="_4-step-by-step-instructions" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-step-by-step-instructions"
+      aria-hidden="true"
+      >#</a
+    >
+    4 Step by step instructions
+  </h2>
+  <h3 id="_4-1-data-preparation" tabindex="-1">
+    <a class="header-anchor" href="#_4-1-data-preparation" aria-hidden="true"
+      >#</a
+    >
+    4.1 Data preparation
+  </h3>
+  <h4 id="_4-1-1-ms-file-preparation" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-1-1-ms-file-preparation"
+      aria-hidden="true"
+      >#</a
+    >
+    4.1.1 MS file preparation
+  </h4>
+  <p><strong>Step 1: File Conversion</strong></p>
+  <p>
+    MetaPro supports MS data acquired with the data-dependent acquisition (DDA)
+    method. Vendor MS data should be converted to Aird format (.aird &amp;
+    .json) before being loaded into MetaPro.
+  </p>
+  <p>
+    Introduction and download link of the file conversion software AirdPro is
+    illustrated above in section 2.5.
+  </p>
+  <ol>
+    <li>
+      <p>
+        Open AirdPro file converter Open AirdPro by running AirdPro.exe in the
+        installation directory. Users can create a desktop shortcut for easy
+        access. <img src="/images/屏幕截图 2022-03-07 152938.png" alt="" />
+      </p>
+    </li>
+    <li>
+      <p>
+        Select files for conversion in DDA mode
+        <img src="/images/屏幕截图 2022-03-07 155523.png" alt="" />
+      </p>
+    </li>
+    <li>
+      <p>Select output folder</p>
+    </li>
+    <li>
+      <p>
+        Start Convert After file conversion, each MS file is converted to two
+        converted files, end with .aird and .json.
+        <img src="/images/屏幕截图 2022-03-07 160557.png" alt="" />
+        For example:
+      </p>
+      <div class="language-text ext-text line-numbers-mode">
+        <pre v-pre class="language-text"><code># Thermo file
 Original: file_name.raw
 Converted: file_name.aird, file_name.json
 
 # SCIEX file
 Original: file_name.wiff, file_name.wiff.scan
 Converted: file_name.aird, file_name.json
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>Step 2: File directory arrangement</strong></p>
-<p>MetaPro enables efficient multi-batch files import by scanning folder structure under the previously set data repository (section 2.4).</p>
-<p>For example, if we set the data directory as <code>repository=/usr/local/data</code></p>
-<p>The folder structure of different projects needs to be arranged as follows:</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>/usr/local/data
+</code></pre>
+        <div class="line-numbers" aria-hidden="true">
+          <span class="line-number">1</span><br /><span class="line-number"
+            >2</span
+          ><br /><span class="line-number">3</span><br /><span
+            class="line-number"
+            >4</span
+          ><br /><span class="line-number">5</span><br /><span
+            class="line-number"
+            >6</span
+          ><br /><span class="line-number">7</span><br />
+        </div>
+      </div>
+      <p><strong>Step 2: File directory arrangement</strong></p>
+      <p>
+        MetaPro enables efficient multi-batch files import by scanning folder
+        structure under the previously set data repository (section 2.4).
+      </p>
+      <p>
+        For example, if we set the data directory as
+        <code>repository=/usr/local/data</code>
+      </p>
+      <p>
+        The folder structure of different projects needs to be arranged as
+        follows:
+      </p>
+      <div class="language-text ext-text line-numbers-mode">
+        <pre v-pre class="language-text"><code>/usr/local/data
    ├── project-1
       ├── batch-1
             ├── converted_file-1.aird
@@ -310,237 +827,593 @@ Converted: file_name.aird, file_name.json
    ├── project-2
    ├── ... ...
 
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>The first-level directory under the scan directory is the project name.
-The second-level directory is the batch name.
-Converted aird files should be placed into batch folders.</p>
-</li>
-</ol>
-<ul>
-<li><strong>Note that</strong>: If your project has only <strong>ONE BATCH,</strong> you also need to create a batch folder in the project directory and put the converted files in the batch folder.</li>
-</ul>
-<h4 id="_4-1-2-library-preparation" tabindex="-1"><a class="header-anchor" href="#_4-1-2-library-preparation" aria-hidden="true">#</a> 4.1.2 Library preparation</h4>
-<p>The Library should be a .txt/.tsv format table formatted in the following template.
-The first line at least needs to contain the <code>mz</code> and <code>rt</code> items. Other items are optional.
-<strong>Example compound library</strong>
-<img src="/images/image_4.png" alt="">
-<strong>Analyte Library</strong></p>
-<p>The analyte library is a list of compounds that you want to identify and quantify from the mass spectrometry data. MetaPro performs targeted data analysis based on this library.</p>
-<p>If you do not have an analyte library, you can make your own analyte library based on the theoretical M/z and elution time of the compounds, download an open-source library, or modify analysis results of other software into an analyte library.</p>
-<p><strong>Internal Standard Library (Optional)</strong></p>
-<p>If you want to change the gradient of your experiment, for example, from 20min to 40min, the elution time of analytes would change and not elute at the RT value in the analyte library. In this circumstance, you can import a new analyte library with modified RT, or use an internal standard library.</p>
-<ul>
-<li>The internal standard library needs to be paired with the analyte library to correct the retention time of the analytes.</li>
-<li>The RT value in the internal standard library needs to be from the same gradient as the RT in the analyte library</li>
-<li>Compounds in internal standard library should have narrow and high-intensity chromatogram peaks.</li>
-<li>The compound number in the internal standard library should be about 10.</li>
-</ul>
-<h3 id="_4-2-start-a-targeted-analysis-task" tabindex="-1"><a class="header-anchor" href="#_4-2-start-a-targeted-analysis-task" aria-hidden="true">#</a> 4.2 Start a targeted analysis task</h3>
-<h4 id="_4-2-1-load-file" tabindex="-1"><a class="header-anchor" href="#_4-2-1-load-file" aria-hidden="true">#</a> 4.2.1 Load file</h4>
-<ol>
-<li>
-<p>Enter Project page, click <code>Create Project</code> at the top.
-<img src="/images/截屏2022-03-07 下午3.59.03.png" alt="">
-Then enter the <code>Project Name</code>. The project name should be the project name set in the <strong>File directory arrangement</strong> (section 4.1.1 Step 2). For example, if you set your project folder name as project-1, you need to name the <code>Project Name</code> as project-1.
-<code>Owner</code> and <code>Description</code> are optional, fill in according to the demand.</p>
-</li>
-<li>
-<p>Click <code>Scan Files</code> to scan all converted Aird format files under the project file
-<img src="/images/scan.png" alt="">
-If MetaPro finds new files in the project folder, MetaPro will start to load the files and pop a message as follows:</p>
-<p><img src="/images/截屏2022-03-03 18.23.54.png" alt=""></p>
-<p>If find no new file or the folder is empty, MetaPro will pop up the following prompt box:</p>
-<p><img src="/images/截屏2022-03-03 18.22.44.png" alt=""></p>
-<p>The file scanning progress can be find at the Task page.
-You can view the loaded files by <code>List → Samples</code> or single click on the project name.
-Sample list is presented as follows:
-<img src="/images/image_5.png" alt=""></p>
-<p>You can view the files in different batches by selecting Batch name at the top of this page.</p>
-</li>
-</ol>
-<h4 id="_4-2-2-load-library" tabindex="-1"><a class="header-anchor" href="#_4-2-2-load-library" aria-hidden="true">#</a> 4.2.2 Load library</h4>
-<p>Enter Library page, click <code>Create Library</code> at the top.</p>
-<p><img src="/images/image_6.png" alt=""></p>
-<p>Input the <code>Library Name</code>, select the <code>Library Type</code>, and upload your library file at <code>Upload File</code>, click OK.</p>
-<p>You must select a <code>Library Type</code> for this library. Select ANALYTES for the analyte library and IS for the internal standard library. If you forget to select library type, click <code>Modify</code> to set the library type before analyzing.</p>
-<h4 id="_4-2-3-set-method-parameters" tabindex="-1"><a class="header-anchor" href="#_4-2-3-set-method-parameters" aria-hidden="true">#</a> 4.2.3 Set Method parameters</h4>
-<p>Enter Method page, click <code>Create</code> at the top.</p>
-<p><img src="/images/image_7.png" alt=""></p>
-<p>Input the <code>Method Name</code>, and set the method parameters.</p>
-<p><img src="/images/image_8.png" alt=""></p>
-<p>The parameters explanation is summarized below:</p>
-<p><img src="/images/image_9.png" alt=""></p>
-<p>You can click <code>Edit</code> on the method page to change analysis parameters.</p>
-<p><strong>Suggestions:</strong></p>
-<ul>
-<li>We recommend using different methods for data under different experimental conditions, such as different mass spectrometers.</li>
-<li>The optimized method should be less modified.</li>
-</ul>
-<h4 id="_4-2-4-start-analysis" tabindex="-1"><a class="header-anchor" href="#_4-2-4-start-analysis" aria-hidden="true">#</a> 4.2.4 Start analysis</h4>
-<ol>
-<li>Enter Project page, click <code>Target Analyze</code> at the row end.
-<img src="/images/target.png" alt=""></li>
-<li>Click <code>Edit</code> to change the libraries and method for batch targeted analysis.
-<img src="/images/image_10.png" alt="">
-Click <code>Save</code> to commit changes.
-Multi-batch editing is also supported. You can select multiple batches by clicking on the checkboxes on the left. Then click <code>More → Edit</code>, and edit libraries and methods for multiple batches.
-<img src="/images/image_11.png" alt="">
-<img src="/images/image_12.png" alt=""></li>
-<li>Click <code>Target Search</code> to start a targeted analysis. You can select multiple batches and click <code>Target Search</code> to submit multiple analysis tasks. MetaPro has a job queue and the tasks will be analyzed batch by batch.
-The analysis progress can be viewed at the Task page.
-<img src="/images/image_13.png" alt="">
-Results can be found in QC page after the analysis process is finished.
-During the analysis process, all MetaPro functions are not affected.</li>
-<li>Result management.
-<ul>
-<li>[View] Click <code>+</code> button of project in Project page
-<img src="/images/image_14.png" alt=""></li>
-<li>[View &amp; Delete] Click <code>List → Overview List</code>
-<img src="/images/image_15.png" alt=""></li>
-</ul>
-</li>
-</ol>
-<h3 id="_4-3-use-batch-qc-inspection-page-for-targeted-analysis" tabindex="-1"><a class="header-anchor" href="#_4-3-use-batch-qc-inspection-page-for-targeted-analysis" aria-hidden="true">#</a> 4.3 Use batch QC inspection page for targeted analysis</h3>
-<h4 id="_4-3-1-access-the-batch-qc-inspection-page" tabindex="-1"><a class="header-anchor" href="#_4-3-1-access-the-batch-qc-inspection-page" aria-hidden="true">#</a> 4.3.1 Access the batch QC inspection page</h4>
-<p>If the targeted analysis process has been finished, then you can view the quantification results on the batch inspection interface.</p>
-<p>Enter project page and click on <code>QC</code> on the project that you want to view.</p>
-<p><img src="/images/qc.png" alt=""></p>
-<h4 id="_4-3-2-batch-quality-control-inspection-interface" tabindex="-1"><a class="header-anchor" href="#_4-3-2-batch-quality-control-inspection-interface" aria-hidden="true">#</a> 4.3.2 Batch Quality Control inspection interface</h4>
-<p>This is the main inspection page on samples in a batch. It includes different function modules as labeled.</p>
-<p><img src="/images/绘图1.png" alt=""></p>
-<ol>
-<li>
-<p>Overview switch module
-Click on the <code>Batch Name</code> or <code>Overview</code> dialog on the left top. You will see the following interface. You can change the current overview to another by clicking on a specific overview.
-<img src="/images/image_16.png" alt=""></p>
-</li>
-<li>
-<p>Compound switch module</p>
-<ul>
-<li><code>Check Status</code> represents for the current check status of compounds. It has Success、Failed、Unknow status.
-<img src="/images/image_17.png" alt="">
-<strong>Shortcuts</strong></li>
-</ul>
-<ol>
-<li>
-<p>Arrow keys: <code>↑</code> <code>↓</code> switch componund； <code>→</code> <code>←</code> switch page</p>
-</li>
-<li>
-<p>Control the check status of the current compound, <code>Space ␣</code> and <code>Enter ⏎</code>: Success, <code>BackSpace ⌫</code>: Failed</p>
-</li>
-<li>
-<p><code>Double click</code>on each row to change RT value</p>
-<ul>
-<li>
-<p>Click on the &quot;more&quot;, users can <code>Reset integration params</code> and <code>Reset TargetRT</code> of a compound.</p>
-</li>
-<li>
-<p>Click on <code>Reset TargetRT</code></p>
-</li>
-</ul>
-<p><img src="/images/image_18.png" alt=""></p>
-<ul>
-<li>Click on <code>Reset integration params</code>
-<img src="/images/image_19.png" alt=""></li>
-</ul>
-</li>
-</ol>
-</li>
-<li>
-<p>Manual inspection module
-The buttons on the top are：<code>Restore</code>, <code>Select All/UnSelect</code>, <code>Manual Integration</code>, <code>Reselect</code>, <code>Submit</code>, <code>Batch Submit</code></p>
-<p><code>Restore</code>: Restore the current module to its initial status.</p>
-<p><code>Select All/Unselect</code>: View all the sample peaks in this batch/Cancel view all the peaks.</p>
-<p><code>Manual Integration</code>: Enter manual integration mode on the selected peak. You can choose two data points (start, end) to modify the peak shape.</p>
-<p><img src="/images/image_20.png" alt="">
-<img src="/images/image_21.png" alt="">
-<code>Reselect</code>: Click this to rechoose the data points.</p>
-<p><code>Submit</code>: Submit the modified peak shape to database.</p>
-<p><code>Batch Submit</code>: Apply the modified peak RT range to all samples in this batch. Used for integrating multiple peaks on an EIC.</p>
-<p>Click on <code>Manual Integration</code>, you can choose two data points to conduct manual integration functions. First left and then right.</p>
-</li>
-<li>
-<p>Spectrum viewer of <code>MS1</code> and <code>MS2</code>
-This is changed according to the sample you choose on the batch inspection module.
-<img src="/images/image_22.png" alt="">
-This is the Spectrum viewer towards all the <code>MS1</code> and <code>MS2</code>. Click on the pointed label to switch pages.
-<img src="/images/image_23.png" alt="">
-<strong>Shortcuts</strong></p>
-<ol>
-<li>keyboard <code>1</code>,<code>2</code>, <code>3</code>：switch check status</li>
-<li><code>A</code>：choose all the samples</li>
-<li><code>ESC</code>：cancel check all</li>
-</ol>
-</li>
-<li>
-<p>Peak shape batch inspection
-Users can choose multi-samples to change their status. Red represents for rejection. Yellow represents for unknown. Green represents for pass. The shortcuts are <code>1</code>, <code>2</code>, <code>3</code>. Keyboard <code>A</code> is to choose all the samples. If the status of a sample is labeled in yellow or red, its quantification result area will be set to 0.
-<img src="/images/image_24.png" alt=""></p>
-</li>
-</ol>
-<h4 id="_4-3-3-qc-inspection-interface-shortcuts-conclusion" tabindex="-1"><a class="header-anchor" href="#_4-3-3-qc-inspection-interface-shortcuts-conclusion" aria-hidden="true">#</a> 4.3.3 QC inspection interface shortcuts conclusion</h4>
-<ol>
-<li>
-<p>Compound switch module</p>
-<ol>
-<li>Arrow keys: <code>↑</code> <code>↓</code> switch compound； <code>→</code> <code>←</code> switch page</li>
-<li>Control the check status of the current compound, <code>Space ␣</code> and <code>Enter ⏎</code>: Success, <code>BackSpace ⌫</code>: Failed</li>
-<li><code>Double click</code>on each row to change RT value</li>
-</ol>
-</li>
-<li>
-<p>Peak shape batch inspection</p>
-<ol>
-<li>keyboard <code>1</code>,<code>2</code>, <code>3</code>：switch check status</li>
-<li><code>A</code>：choose all the samples</li>
-<li><code>ESC</code>：cancel check all</li>
-</ol>
-</li>
-<li>
-<p>Manual integration module</p>
-<ol>
-<li><code>Double click</code>：submit manual integration results</li>
-<li><code>R</code> ：refresh the current page</li>
-</ol>
-<hr>
-</li>
-</ol>
-<h3 id="_4-4-spectral-library-curation" tabindex="-1"><a class="header-anchor" href="#_4-4-spectral-library-curation" aria-hidden="true">#</a> 4.4 Spectral Library Curation</h3>
-<h4 id="_4-4-1-build-library" tabindex="-1"><a class="header-anchor" href="#_4-4-1-build-library" aria-hidden="true">#</a> 4.4.1 <strong>Build Library</strong></h4>
-<p>Choose inspected overview to conduct library curation process on a specific project.</p>
-<p><img src="/images/image_25.png" alt=""></p>
-<p>This will generate a Library Building task and you can check it on the task list. The process automatically chooses all the inspected and passed spectra to save them into the database. If you saw the task status is finished, you can conduct library QC on the curated library.</p>
-<h4 id="_4-4-2-library-qc" tabindex="-1"><a class="header-anchor" href="#_4-4-2-library-qc" aria-hidden="true">#</a> 4.4.2 Library QC</h4>
-<p>After build library task has been finished on a inspected library. This library will have collected spectra waiting for inspection. Click on the <code>QC</code> button to view the spectra inside this library.</p>
-<p><img src="/images/image_26.png" alt=""></p>
-<p>Enter the library QC interface you will see a page like that.</p>
-<p><img src="/images/image_27.png" alt=""></p>
-<p>On this page you can see all the spectra collected on this compound. You can multi-choose to delete low-quality spectra.</p>
-<p><strong>Shortcuts:</strong></p>
-<ol>
-<li>Arrow keys: <code>↑</code> <code>↓</code> switch compound； <code>→</code> <code>←</code> switch page</li>
-<li><code>Del</code>: Delete the selected spectra.</li>
-</ol>
-<h3 id="_4-5-export" tabindex="-1"><a class="header-anchor" href="#_4-5-export" aria-hidden="true">#</a> 4.5 Export</h3>
-<h4 id="_4-5-1-export-quantification-reports" tabindex="-1"><a class="header-anchor" href="#_4-5-1-export-quantification-reports" aria-hidden="true">#</a> 4.5.1 Export quantification reports</h4>
-<p><img src="/images/image_28.png" alt=""></p>
-<p>First, choose a project on the project page, click on the <code>+</code> to view all the overviews under this project. Select one and click the <code>Export Report</code>. It will let users input the output file name towards a specific overview. The quantification results of this overview will be exported into the given <code>.xlsx</code> file.</p>
-<p><img src="/images/image_29.png" alt=""></p>
-<p>Example exported file look like</p>
-<p><img src="/images/image_30.png" alt=""></p>
-<hr>
-<h4 id="_4-5-2-export-library" tabindex="-1"><a class="header-anchor" href="#_4-5-2-export-library" aria-hidden="true">#</a> 4.5.2 Export Library</h4>
-<p><img src="/images/image_31.png" alt=""></p>
-<p>At the library page, click on Export Spectra button will let MetaPro output the curated spectra to the given export file path according to the compounds. The spectra are stored in txt format with the first column representing for m/z and the second column representing for intensity.</p>
-<h2 id="supplementary" tabindex="-1"><a class="header-anchor" href="#supplementary" aria-hidden="true">#</a> Supplementary</h2>
-<h3 id="performance-optimization" tabindex="-1"><a class="header-anchor" href="#performance-optimization" aria-hidden="true">#</a> Performance Optimization</h3>
-<ul>
-<li>NOTE: This step has relatively complicated operations. Users who need to perform high-throughput inspection analysis on the server can perform performance optimization according to the following description.</li>
-</ul>
-<p>MetaPro uses in-memory caching technology to speed up the analysis of MS data.</p>
-<p>In the manual inspection process, each time the user changes the integration parameters, MetaPro needs to re-analyze all files in the current batch. Most of the analysis time is spent reading the files, about <code>1 second</code>per file on the tutorial dataset. If a user is inspecting a batch with <code>10 data files</code>and wants to change the integration parameter of a compound, without memory caching, it will take <code>10 seconds</code> to load files and re-analysis the compound within <code>1 second</code>. MetaPro accelerates repeated reading of files through caching technology. In the case of sufficient memory, MetaPro can load the file from disk only once when recalculating the first compound, save the file reading time for the inspection of other compounds, and achieve efficient batch manual quality control.</p>
-<p>Considering the performance of most users' computers, we configure a small amount of cache in the default installation. Users can change the cache configuration themselves to achieve faster response and higher inspection efficiency.</p>
-<p>The configuration file is located at <code>INSTALLATION_PATH/libs/config/ehcache.xml</code></p>
-<p><img src="/images/image_32.png" alt=""></p>
-<p>Users can moderately increase the value of <code>maxElementsInMemory</code> at line 9, according to the computer memory size. This value means the max number of cached files. If the memory size is big enough, <code>maxElementsInMemory</code> should be larger than the number of files in each batch. If not, try separating data into multiple batches to avoid disk reading.</p>
-<p>Save the config file, restart MetaPro and enjoy.</p>
+</code></pre>
+        <div class="line-numbers" aria-hidden="true">
+          <span class="line-number">1</span><br /><span class="line-number"
+            >2</span
+          ><br /><span class="line-number">3</span><br /><span
+            class="line-number"
+            >4</span
+          ><br /><span class="line-number">5</span><br /><span
+            class="line-number"
+            >6</span
+          ><br /><span class="line-number">7</span><br /><span
+            class="line-number"
+            >8</span
+          ><br /><span class="line-number">9</span><br /><span
+            class="line-number"
+            >10</span
+          ><br /><span class="line-number">11</span><br /><span
+            class="line-number"
+            >12</span
+          ><br /><span class="line-number">13</span><br /><span
+            class="line-number"
+            >14</span
+          ><br /><span class="line-number">15</span><br />
+        </div>
+      </div>
+      <p>
+        The first-level directory under the scan directory is the project name.
+        The second-level directory is the batch name. Converted aird files
+        should be placed into batch folders.
+      </p>
+    </li>
+  </ol>
+  <ul>
+    <li>
+      <strong>Note that</strong>: If your project has only
+      <strong>ONE BATCH,</strong> you also need to create a batch folder in the
+      project directory and put the converted files in the batch folder.
+    </li>
+  </ul>
+  <h4 id="_4-1-2-library-preparation" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-1-2-library-preparation"
+      aria-hidden="true"
+      >#</a
+    >
+    4.1.2 Library preparation
+  </h4>
+  <p>
+    The Library should be a .txt/.tsv format table formatted in the following
+    template. The first line at least needs to contain the <code>mz</code> and
+    <code>rt</code> items. Other items are optional.
+    <strong>Example compound library</strong>
+    <img src="/images/image_4.png" alt="" />
+    <strong>Analyte Library</strong>
+  </p>
+  <p>
+    The analyte library is a list of compounds that you want to identify and
+    quantify from the mass spectrometry data. MetaPro performs targeted data
+    analysis based on this library.
+  </p>
+  <p>
+    If you do not have an analyte library, you can make your own analyte library
+    based on the theoretical M/z and elution time of the compounds, download an
+    open-source library, or modify analysis results of other software into an
+    analyte library.
+  </p>
+  <p><strong>Internal Standard Library (Optional)</strong></p>
+  <p>
+    If you want to change the gradient of your experiment, for example, from
+    20min to 40min, the elution time of analytes would change and not elute at
+    the RT value in the analyte library. In this circumstance, you can import a
+    new analyte library with modified RT, or use an internal standard library.
+  </p>
+  <ul>
+    <li>
+      The internal standard library needs to be paired with the analyte library
+      to correct the retention time of the analytes.
+    </li>
+    <li>
+      The RT value in the internal standard library needs to be from the same
+      gradient as the RT in the analyte library
+    </li>
+    <li>
+      Compounds in internal standard library should have narrow and
+      high-intensity chromatogram peaks.
+    </li>
+    <li>
+      The compound number in the internal standard library should be about 10.
+    </li>
+  </ul>
+  <h3 id="_4-2-start-a-targeted-analysis-task" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-2-start-a-targeted-analysis-task"
+      aria-hidden="true"
+      >#</a
+    >
+    4.2 Start a targeted analysis task
+  </h3>
+  <h4 id="_4-2-1-load-file" tabindex="-1">
+    <a class="header-anchor" href="#_4-2-1-load-file" aria-hidden="true">#</a>
+    4.2.1 Load file
+  </h4>
+  <ol>
+    <li>
+      <p>
+        Enter Project page, click <code>Create Project</code> at the top.
+        <img src="/images/截屏2022-03-07 下午3.59.03.png" alt="" />
+        Then enter the <code>Project Name</code>. The project name should be the
+        project name set in the
+        <strong>File directory arrangement</strong> (section 4.1.1 Step 2). For
+        example, if you set your project folder name as project-1, you need to
+        name the <code>Project Name</code> as project-1. <code>Owner</code> and
+        <code>Description</code> are optional, fill in according to the demand.
+      </p>
+    </li>
+    <li>
+      <p>
+        Click <code>Scan Files</code> to scan all converted Aird format files
+        under the project file
+        <img src="/images/scan.png" alt="" />
+        If MetaPro finds new files in the project folder, MetaPro will start to
+        load the files and pop a message as follows:
+      </p>
+      <p><img src="/images/截屏2022-03-03 18.23.54.png" alt="" /></p>
+      <p>
+        If find no new file or the folder is empty, MetaPro will pop up the
+        following prompt box:
+      </p>
+      <p><img src="/images/截屏2022-03-03 18.22.44.png" alt="" /></p>
+      <p>
+        The file scanning progress can be find at the Task page. You can view
+        the loaded files by <code>List → Samples</code> or single click on the
+        project name. Sample list is presented as follows:
+        <img src="/images/image_5.png" alt="" />
+      </p>
+      <p>
+        You can view the files in different batches by selecting Batch name at
+        the top of this page.
+      </p>
+    </li>
+  </ol>
+  <h4 id="_4-2-2-load-library" tabindex="-1">
+    <a class="header-anchor" href="#_4-2-2-load-library" aria-hidden="true"
+      >#</a
+    >
+    4.2.2 Load library
+  </h4>
+  <p>Enter Library page, click <code>Create Library</code> at the top.</p>
+  <p><img src="/images/image_6.png" alt="" /></p>
+  <p>
+    Input the <code>Library Name</code>, select the <code>Library Type</code>,
+    and upload your library file at <code>Upload File</code>, click OK.
+  </p>
+  <p>
+    You must select a <code>Library Type</code> for this library. Select
+    ANALYTES for the analyte library and IS for the internal standard library.
+    If you forget to select library type, click <code>Modify</code> to set the
+    library type before analyzing.
+  </p>
+  <h4 id="_4-2-3-set-method-parameters" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-2-3-set-method-parameters"
+      aria-hidden="true"
+      >#</a
+    >
+    4.2.3 Set Method parameters
+  </h4>
+  <p>Enter Method page, click <code>Create</code> at the top.</p>
+  <p><img src="/images/image_7.png" alt="" /></p>
+  <p>Input the <code>Method Name</code>, and set the method parameters.</p>
+  <p><img src="/images/image_8.png" alt="" /></p>
+  <p>The parameters explanation is summarized below:</p>
+  <p><img src="/images/image_9.png" alt="" /></p>
+  <p>
+    You can click <code>Edit</code> on the method page to change analysis
+    parameters.
+  </p>
+  <p><strong>Suggestions:</strong></p>
+  <ul>
+    <li>
+      We recommend using different methods for data under different experimental
+      conditions, such as different mass spectrometers.
+    </li>
+    <li>The optimized method should be less modified.</li>
+  </ul>
+  <h4 id="_4-2-4-start-analysis" tabindex="-1">
+    <a class="header-anchor" href="#_4-2-4-start-analysis" aria-hidden="true"
+      >#</a
+    >
+    4.2.4 Start analysis
+  </h4>
+  <ol>
+    <li>
+      Enter Project page, click <code>Target Analyze</code> at the row end.
+      <img src="/images/target.png" alt="" />
+    </li>
+    <li>
+      Click <code>Edit</code> to change the libraries and method for batch
+      targeted analysis.
+      <img src="/images/image_10.png" alt="" />
+      Click <code>Save</code> to commit changes. Multi-batch editing is also
+      supported. You can select multiple batches by clicking on the checkboxes
+      on the left. Then click <code>More → Edit</code>, and edit libraries and
+      methods for multiple batches.
+      <img src="/images/image_11.png" alt="" />
+      <img src="/images/image_12.png" alt="" />
+    </li>
+    <li>
+      Click <code>Target Search</code> to start a targeted analysis. You can
+      select multiple batches and click <code>Target Search</code> to submit
+      multiple analysis tasks. MetaPro has a job queue and the tasks will be
+      analyzed batch by batch. The analysis progress can be viewed at the Task
+      page.
+      <img src="/images/image_13.png" alt="" />
+      Results can be found in QC page after the analysis process is finished.
+      During the analysis process, all MetaPro functions are not affected.
+    </li>
+    <li>
+      Result management.
+      <ul>
+        <li>
+          [View] Click <code>+</code> button of project in Project page
+          <img src="/images/image_14.png" alt="" />
+        </li>
+        <li>
+          [View &amp; Delete] Click <code>List → Overview List</code>
+          <img src="/images/image_15.png" alt="" />
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h3
+    id="_4-3-use-batch-qc-inspection-page-for-targeted-analysis"
+    tabindex="-1"
+  >
+    <a
+      class="header-anchor"
+      href="#_4-3-use-batch-qc-inspection-page-for-targeted-analysis"
+      aria-hidden="true"
+      >#</a
+    >
+    4.3 Use batch QC inspection page for targeted analysis
+  </h3>
+  <h4 id="_4-3-1-access-the-batch-qc-inspection-page" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-3-1-access-the-batch-qc-inspection-page"
+      aria-hidden="true"
+      >#</a
+    >
+    4.3.1 Access the batch QC inspection page
+  </h4>
+  <p>
+    If the targeted analysis process has been finished, then you can view the
+    quantification results on the batch inspection interface.
+  </p>
+  <p>
+    Enter project page and click on <code>QC</code> on the project that you want
+    to view.
+  </p>
+  <p><img src="/images/qc.png" alt="" /></p>
+  <h4 id="_4-3-2-batch-quality-control-inspection-interface" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-3-2-batch-quality-control-inspection-interface"
+      aria-hidden="true"
+      >#</a
+    >
+    4.3.2 Batch Quality Control inspection interface
+  </h4>
+  <p>
+    This is the main inspection page on samples in a batch. It includes
+    different function modules as labeled.
+  </p>
+  <p><img src="/images/绘图1.png" alt="" /></p>
+  <ol>
+    <li>
+      <p>
+        Overview switch module Click on the <code>Batch Name</code> or
+        <code>Overview</code> dialog on the left top. You will see the following
+        interface. You can change the current overview to another by clicking on
+        a specific overview. <img src="/images/image_16.png" alt="" />
+      </p>
+    </li>
+    <li>
+      <p>Compound switch module</p>
+      <ul>
+        <li>
+          <code>Check Status</code> represents for the current check status of
+          compounds. It has Success、Failed、Unknow status.
+          <img src="/images/image_17.png" alt="" />
+          <strong>Shortcuts</strong>
+        </li>
+      </ul>
+      <ol>
+        <li>
+          <p>
+            Arrow keys: <code>↑</code> <code>↓</code> switch componund；
+            <code>→</code> <code>←</code> switch page
+          </p>
+        </li>
+        <li>
+          <p>
+            Control the check status of the current compound,
+            <code>Space ␣</code> and <code>Enter ⏎</code>: Success,
+            <code>BackSpace ⌫</code>: Failed
+          </p>
+        </li>
+        <li>
+          <p><code>Double click</code>on each row to change RT value</p>
+          <ul>
+            <li>
+              <p>
+                Click on the &quot;more&quot;, users can
+                <code>Reset integration params</code> and
+                <code>Reset TargetRT</code> of a compound.
+              </p>
+            </li>
+            <li>
+              <p>Click on <code>Reset TargetRT</code></p>
+            </li>
+          </ul>
+          <p><img src="/images/image_18.png" alt="" /></p>
+          <ul>
+            <li>
+              Click on <code>Reset integration params</code>
+              <img src="/images/image_19.png" alt="" />
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>
+        Manual inspection module The buttons on the top
+        are：<code>Restore</code>, <code>Select All/UnSelect</code>,
+        <code>Manual Integration</code>, <code>Reselect</code>,
+        <code>Submit</code>, <code>Batch Submit</code>
+      </p>
+      <p>
+        <code>Restore</code>: Restore the current module to its initial status.
+      </p>
+      <p>
+        <code>Select All/Unselect</code>: View all the sample peaks in this
+        batch/Cancel view all the peaks.
+      </p>
+      <p>
+        <code>Manual Integration</code>: Enter manual integration mode on the
+        selected peak. You can choose two data points (start, end) to modify the
+        peak shape.
+      </p>
+      <p>
+        <img src="/images/image_20.png" alt="" />
+        <img src="/images/image_21.png" alt="" />
+        <code>Reselect</code>: Click this to rechoose the data points.
+      </p>
+      <p><code>Submit</code>: Submit the modified peak shape to database.</p>
+      <p>
+        <code>Batch Submit</code>: Apply the modified peak RT range to all
+        samples in this batch. Used for integrating multiple peaks on an EIC.
+      </p>
+      <p>
+        Click on <code>Manual Integration</code>, you can choose two data points
+        to conduct manual integration functions. First left and then right.
+      </p>
+    </li>
+    <li>
+      <p>
+        Spectrum viewer of <code>MS1</code> and <code>MS2</code>
+        This is changed according to the sample you choose on the batch
+        inspection module.
+        <img src="/images/image_22.png" alt="" />
+        This is the Spectrum viewer towards all the <code>MS1</code> and
+        <code>MS2</code>. Click on the pointed label to switch pages.
+        <img src="/images/image_23.png" alt="" />
+        <strong>Shortcuts</strong>
+      </p>
+      <ol>
+        <li>
+          keyboard <code>1</code>,<code>2</code>, <code>3</code>：switch check
+          status
+        </li>
+        <li><code>A</code>：choose all the samples</li>
+        <li><code>ESC</code>：cancel check all</li>
+      </ol>
+    </li>
+    <li>
+      <p>
+        Peak shape batch inspection Users can choose multi-samples to change
+        their status. Red represents for rejection. Yellow represents for
+        unknown. Green represents for pass. The shortcuts are <code>1</code>,
+        <code>2</code>, <code>3</code>. Keyboard <code>A</code> is to choose all
+        the samples. If the status of a sample is labeled in yellow or red, its
+        quantification result area will be set to 0.
+        <img src="/images/image_24.png" alt="" />
+      </p>
+    </li>
+  </ol>
+  <h4 id="_4-3-3-qc-inspection-interface-shortcuts-conclusion" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-3-3-qc-inspection-interface-shortcuts-conclusion"
+      aria-hidden="true"
+      >#</a
+    >
+    4.3.3 QC inspection interface shortcuts conclusion
+  </h4>
+  <ol>
+    <li>
+      <p>Compound switch module</p>
+      <ol>
+        <li>
+          Arrow keys: <code>↑</code> <code>↓</code> switch compound；
+          <code>→</code> <code>←</code> switch page
+        </li>
+        <li>
+          Control the check status of the current compound,
+          <code>Space ␣</code> and <code>Enter ⏎</code>: Success,
+          <code>BackSpace ⌫</code>: Failed
+        </li>
+        <li><code>Double click</code>on each row to change RT value</li>
+      </ol>
+    </li>
+    <li>
+      <p>Peak shape batch inspection</p>
+      <ol>
+        <li>
+          keyboard <code>1</code>,<code>2</code>, <code>3</code>：switch check
+          status
+        </li>
+        <li><code>A</code>：choose all the samples</li>
+        <li><code>ESC</code>：cancel check all</li>
+      </ol>
+    </li>
+    <li>
+      <p>Manual integration module</p>
+      <ol>
+        <li><code>Double click</code>：submit manual integration results</li>
+        <li><code>R</code> ：refresh the current page</li>
+      </ol>
+      <hr />
+    </li>
+  </ol>
+  <h3 id="_4-4-spectral-library-curation" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-4-spectral-library-curation"
+      aria-hidden="true"
+      >#</a
+    >
+    4.4 Spectral Library Curation
+  </h3>
+  <h4 id="_4-4-1-build-library" tabindex="-1">
+    <a class="header-anchor" href="#_4-4-1-build-library" aria-hidden="true"
+      >#</a
+    >
+    4.4.1 <strong>Build Library</strong>
+  </h4>
+  <p>
+    Choose inspected overview to conduct library curation process on a specific
+    project.
+  </p>
+  <p><img src="/images/image_25.png" alt="" /></p>
+  <p>
+    This will generate a Library Building task and you can check it on the task
+    list. The process automatically chooses all the inspected and passed spectra
+    to save them into the database. If you saw the task status is finished, you
+    can conduct library QC on the curated library.
+  </p>
+  <h4 id="_4-4-2-library-qc" tabindex="-1">
+    <a class="header-anchor" href="#_4-4-2-library-qc" aria-hidden="true">#</a>
+    4.4.2 Library QC
+  </h4>
+  <p>
+    After build library task has been finished on a inspected library. This
+    library will have collected spectra waiting for inspection. Click on the
+    <code>QC</code> button to view the spectra inside this library.
+  </p>
+  <p><img src="/images/image_26.png" alt="" /></p>
+  <p>Enter the library QC interface you will see a page like that.</p>
+  <p><img src="/images/image_27.png" alt="" /></p>
+  <p>
+    On this page you can see all the spectra collected on this compound. You can
+    multi-choose to delete low-quality spectra.
+  </p>
+  <p><strong>Shortcuts:</strong></p>
+  <ol>
+    <li>
+      Arrow keys: <code>↑</code> <code>↓</code> switch compound；
+      <code>→</code> <code>←</code> switch page
+    </li>
+    <li><code>Del</code>: Delete the selected spectra.</li>
+  </ol>
+  <h3 id="_4-5-export" tabindex="-1">
+    <a class="header-anchor" href="#_4-5-export" aria-hidden="true">#</a> 4.5
+    Export
+  </h3>
+  <h4 id="_4-5-1-export-quantification-reports" tabindex="-1">
+    <a
+      class="header-anchor"
+      href="#_4-5-1-export-quantification-reports"
+      aria-hidden="true"
+      >#</a
+    >
+    4.5.1 Export quantification reports
+  </h4>
+  <p><img src="/images/image_28.png" alt="" /></p>
+  <p>
+    First, choose a project on the project page, click on the <code>+</code> to
+    view all the overviews under this project. Select one and click the
+    <code>Export Report</code>. It will let users input the output file name
+    towards a specific overview. The quantification results of this overview
+    will be exported into the given <code>.xlsx</code> file.
+  </p>
+  <p><img src="/images/image_29.png" alt="" /></p>
+  <p>Example exported file look like</p>
+  <p><img src="/images/image_30.png" alt="" /></p>
+  <hr />
+  <h4 id="_4-5-2-export-library" tabindex="-1">
+    <a class="header-anchor" href="#_4-5-2-export-library" aria-hidden="true"
+      >#</a
+    >
+    4.5.2 Export Library
+  </h4>
+  <p><img src="/images/image_31.png" alt="" /></p>
+  <p>
+    At the library page, click on Export Spectra button will let MetaPro output
+    the curated spectra to the given export file path according to the
+    compounds. The spectra are stored in txt format with the first column
+    representing for m/z and the second column representing for intensity.
+  </p>
+  <h2 id="supplementary" tabindex="-1">
+    <a class="header-anchor" href="#supplementary" aria-hidden="true">#</a>
+    Supplementary
+  </h2>
+  <h3 id="performance-optimization" tabindex="-1">
+    <a class="header-anchor" href="#performance-optimization" aria-hidden="true"
+      >#</a
+    >
+    Performance Optimization
+  </h3>
+  <ul>
+    <li>
+      NOTE: This step has relatively complicated operations. Users who need to
+      perform high-throughput inspection analysis on the server can perform
+      performance optimization according to the following description.
+    </li>
+  </ul>
+  <p>
+    MetaPro uses in-memory caching technology to speed up the analysis of MS
+    data.
+  </p>
+  <p>
+    In the manual inspection process, each time the user changes the integration
+    parameters, MetaPro needs to re-analyze all files in the current batch. Most
+    of the analysis time is spent reading the files, about
+    <code>1 second</code>per file on the tutorial dataset. If a user is
+    inspecting a batch with <code>10 data files</code>and wants to change the
+    integration parameter of a compound, without memory caching, it will take
+    <code>10 seconds</code> to load files and re-analysis the compound within
+    <code>1 second</code>. MetaPro accelerates repeated reading of files through
+    caching technology. In the case of sufficient memory, MetaPro can load the
+    file from disk only once when recalculating the first compound, save the
+    file reading time for the inspection of other compounds, and achieve
+    efficient batch manual quality control.
+  </p>
+  <p>
+    Considering the performance of most users' computers, we configure a small
+    amount of cache in the default installation. Users can change the cache
+    configuration themselves to achieve faster response and higher inspection
+    efficiency.
+  </p>
+  <p>
+    The configuration file is located at
+    <code>INSTALLATION_PATH/libs/config/ehcache.xml</code>
+  </p>
+  <p><img src="/images/image_32.png" alt="" /></p>
+  <p>
+    Users can moderately increase the value of
+    <code>maxElementsInMemory</code> at line 9, according to the computer memory
+    size. This value means the max number of cached files. If the memory size is
+    big enough, <code>maxElementsInMemory</code> should be larger than the
+    number of files in each batch. If not, try separating data into multiple
+    batches to avoid disk reading.
+  </p>
+  <p>Save the config file, restart MetaPro and enjoy.</p>
 </template>

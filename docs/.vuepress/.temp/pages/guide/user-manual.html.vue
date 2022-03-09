@@ -1,8 +1,8 @@
 <template><h1 id="user-manual" tabindex="-1"><a class="header-anchor" href="#user-manual" aria-hidden="true">#</a> User Manual</h1>
 <h2 id="main-interface-of-metapro" tabindex="-1"><a class="header-anchor" href="#main-interface-of-metapro" aria-hidden="true">#</a> Main Interface of MetaPro</h2>
-<p><img src="/images/image (1).png" alt=""></p>
+<p><img src="/images/image_33.png" alt=""></p>
 <h2 id="framework-of-metapro" tabindex="-1"><a class="header-anchor" href="#framework-of-metapro" aria-hidden="true">#</a> Framework of MetaPro</h2>
-<p><img src="/images/Figure 1.png" alt=""></p>
+<p><img src="/images/image_34.png" alt=""></p>
 <h2 id="demo-website" tabindex="-1"><a class="header-anchor" href="#demo-website" aria-hidden="true">#</a> Demo website</h2>
 <p><a href="http://47.88.77.176" target="_blank" rel="noopener noreferrer">http://47.88.77.176<ExternalLinkIcon/></a></p>
 <h2 id="_1-general-information" tabindex="-1"><a class="header-anchor" href="#_1-general-information" aria-hidden="true">#</a> 1 General Information</h2>
@@ -130,7 +130,7 @@
 <p><strong>start:</strong> Right click <code>MetaProStart.bat</code>, run as administrator.</p>
 <p><strong>Successful operation:</strong>
 The following operations appear in the terminal to indicate that the operation is successful:
-<img src="/images/屏幕截图 2022-03-07 114438.png" alt="">
+<img src="/images/win.png" alt="">
 <strong>After successful startup, open a browser and connect to <code>localhost:8080</code></strong></p>
 </li>
 <li>
@@ -270,11 +270,11 @@ Clicking on the selected project will get access to its detailed information pag
 <li>
 <p>Open AirdPro file converter
 Open AirdPro by running AirdPro.exe in the installation directory. Users can create a desktop shortcut for easy access.
-<img src="/images/屏幕截图 2022-03-07 152938.png" alt=""></p>
+<img src="/images/image_39.png" alt=""></p>
 </li>
 <li>
 <p>Select files for conversion in DDA mode
-<img src="/images/屏幕截图 2022-03-07 155523.png" alt=""></p>
+<img src="/images/image_40.png" alt=""></p>
 </li>
 <li>
 <p>Select output folder</p>
@@ -282,7 +282,7 @@ Open AirdPro by running AirdPro.exe in the installation directory. Users can cre
 <li>
 <p>Start Convert
 After file conversion, each MS file is converted to two converted files, end with .aird and .json.
-<img src="/images/屏幕截图 2022-03-07 160557.png" alt="">
+<img src="/images/image_41.png" alt="">
 For example:</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code># Thermo file
 Original: file_name.raw
@@ -339,7 +339,7 @@ The first line at least needs to contain the <code>mz</code> and <code>rt</code>
 <ol>
 <li>
 <p>Enter Project page, click <code>Create Project</code> at the top.
-<img src="/images/截屏2022-03-07 下午3.59.03.png" alt="">
+<img src="/images/image_38.png" alt="">
 Then enter the <code>Project Name</code>. The project name should be the project name set in the <strong>File directory arrangement</strong> (section 4.1.1 Step 2). For example, if you set your project folder name as project-1, you need to name the <code>Project Name</code> as project-1.
 <code>Owner</code> and <code>Description</code> are optional, fill in according to the demand.</p>
 </li>
@@ -347,9 +347,9 @@ Then enter the <code>Project Name</code>. The project name should be the project
 <p>Click <code>Scan Files</code> to scan all converted Aird format files under the project file
 <img src="/images/scan.png" alt="">
 If MetaPro finds new files in the project folder, MetaPro will start to load the files and pop a message as follows:</p>
-<p><img src="/images/截屏2022-03-03 18.23.54.png" alt=""></p>
+<p><img src="/images/image_37.png" alt=""></p>
 <p>If find no new file or the folder is empty, MetaPro will pop up the following prompt box:</p>
-<p><img src="/images/截屏2022-03-03 18.22.44.png" alt=""></p>
+<p><img src="/images/image_36.png" alt=""></p>
 <p>The file scanning progress can be find at the Task page.
 You can view the loaded files by <code>List → Samples</code> or single click on the project name.
 Sample list is presented as follows:
@@ -406,7 +406,7 @@ During the analysis process, all MetaPro functions are not affected.</li>
 <p><img src="/images/qc.png" alt=""></p>
 <h4 id="_4-3-2-batch-quality-control-inspection-interface" tabindex="-1"><a class="header-anchor" href="#_4-3-2-batch-quality-control-inspection-interface" aria-hidden="true">#</a> 4.3.2 Batch Quality Control inspection interface</h4>
 <p>This is the main inspection page on samples in a batch. It includes different function modules as labeled.</p>
-<p><img src="/images/绘图1.png" alt=""></p>
+<p><img src="/images/image_35.png" alt=""></p>
 <ol>
 <li>
 <p>Overview switch module

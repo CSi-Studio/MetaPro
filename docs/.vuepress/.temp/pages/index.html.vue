@@ -1,9 +1,9 @@
 <template><h1 id="user-manual" tabindex="-1"><a class="header-anchor" href="#user-manual" aria-hidden="true">#</a> <RouterLink to="/guide/user-manual.html">User Manual</RouterLink></h1>
 <h2 id="framework" tabindex="-1"><a class="header-anchor" href="#framework" aria-hidden="true">#</a> Framework</h2>
-<p><img src="/images/image (1).png" alt=""></p>
+<p><img src="/images/image_33.png" alt=""></p>
 <hr>
 <h2 id="main-interface" tabindex="-1"><a class="header-anchor" href="#main-interface" aria-hidden="true">#</a> Main Interface</h2>
-<p><img src="/images/Figure 1.png" alt=""></p>
+<p><img src="/images/image_34.png" alt=""></p>
 <hr>
 <h2 id="demo" tabindex="-1"><a class="header-anchor" href="#demo" aria-hidden="true">#</a> Demo</h2>
 <p><a href="http://47.88.77.176" target="_blank" rel="noopener noreferrer"><code>http://47.88.77.176</code><ExternalLinkIcon/></a></p>
