@@ -30,15 +30,10 @@ package-lock.json
 functions/*
 .temp/**
 
-# umi
-.umi
-.umi-production
-
 # screenshot
 screenshot
 .firebase
 .eslintcache
 
 build
-/src/pages/.umi/
 src/utils/request.js

@@ -1,14 +1,20 @@
-# MetaPro user manual
+---
+lang: en-US
+title: MetaPro
+description: MetaPro README
+---
+
+# [User Manual](../guide/user-manual.md)
 
 ## Framework
 
-![](./image/Framework.png)
+![](/images/image%20%281%29.png)
 
 ---
 
 ## Main Interface
 
-![](./image/Interface.png)
+![](/images/Figure%201.png)
 
 ---
 
@@ -48,7 +54,7 @@
   **Successful operation:**
 
   The following operations appear in the terminal to indicate that the operation is successful:
-  ![](./image/win.png)
+  ![](/images/win.png)
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
 - **stop:** Right click `MetaProStop.bat`, run as administrator
@@ -86,7 +92,7 @@
 
   $ child process started successfully, parent exiting
   ```
-  
+
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 
 - stop
@@ -98,7 +104,6 @@
 - uninstall
 
   Stop MetaPro and delete the installation folder.
-
 
 ### Linux
 
@@ -149,4 +154,4 @@
 
 ## How to use
 
-[GitBook](https://commands-1.gitbook.io/metapro/)
+[UserManual](../guide/user-manual.md)
