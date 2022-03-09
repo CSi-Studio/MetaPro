@@ -42,7 +42,7 @@
 - **start:** Right click `MetaProStart.bat`, run as administrator.
   **After successful startup, open a browser and connect to** **`localhost:8080`**
 - **stop:** Right click `MetaProStop.bat`, run as administrator
-- **uninstall:** Open `uninstall` folder. Right click `MetaProUnintall.bat`, run as administrator
+- **uninstall:** Close the terminal, and delete the folder to uninstall MetaPro.
 
 	 **Successful operation:**
 
@@ -70,11 +70,7 @@
   bash MetaproStop.sh
   ```
 	**After successful startup, open a browser and connect to** **`localhost:8080`**
-- uninstall
-
-  ```
-  bash uninstall/MetaproUninstall.sh
-  ```
+- uninstall: Close the terminal, and delete the folder to uninstall MetaPro.
 
 	**Successful operation:**
 
@@ -116,11 +112,7 @@
   bash MetaproStop.sh
   ```
 	**After successful startup, open a browser and connect to** **`localhost:8080`**
-- uninstall
-
-  ```
-  bash uninstall/MetaproUninstall.sh
-  ```
+- uninstall: Close the terminal, and delete the folder to uninstall MetaPro.
 
 	**Successful operation:**
 
