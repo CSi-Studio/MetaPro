@@ -1,15 +1,17 @@
 export const data = {
   "key": "v-8daa1a0e",
   "path": "/",
-  "title": "MetaPro",
+  "title": "README",
   "lang": "en-US",
-  "frontmatter": {
-    "lang": "en-US",
-    "title": "MetaPro",
-    "description": "MetaPro README"
-  },
+  "frontmatter": {},
   "excerpt": "",
   "headers": [
+    {
+      "level": 2,
+      "title": "User Manual",
+      "slug": "user-manual",
+      "children": []
+    },
     {
       "level": 2,
       "title": "Framework",
@@ -80,14 +82,26 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1646809691000,
     "contributors": [
       {
         "name": "JW",
         "email": "wanglihuaya@outlook.com",
-        "commits": 1
+        "commits": 3
       }
     ]
   },
   "filePathRelative": "README.md"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

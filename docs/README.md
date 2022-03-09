@@ -1,10 +1,14 @@
----
+<!-- ---
 lang: en-US
 title: MetaPro
 description: MetaPro README
----
+--- -->
 
-# [User Manual](../guide/user-manual.md)
+# README
+
+## User Manual
+
+[MetaPro User Manual](../guide/user-manual.md)
 
 ## Framework
 

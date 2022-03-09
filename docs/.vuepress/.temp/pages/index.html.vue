@@ -1,4 +1,11 @@
-<template><h1 id="user-manual" tabindex="-1"><a class="header-anchor" href="#user-manual" aria-hidden="true">#</a> <RouterLink to="/guide/user-manual.html">User Manual</RouterLink></h1>
+<template><!-- ---
+lang: en-US
+title: MetaPro
+description: MetaPro README
+--- -->
+<h1 id="readme" tabindex="-1"><a class="header-anchor" href="#readme" aria-hidden="true">#</a> README</h1>
+<h2 id="user-manual" tabindex="-1"><a class="header-anchor" href="#user-manual" aria-hidden="true">#</a> User Manual</h2>
+<p><RouterLink to="/guide/user-manual.html">MetaPro User Manual</RouterLink></p>
 <h2 id="framework" tabindex="-1"><a class="header-anchor" href="#framework" aria-hidden="true">#</a> Framework</h2>
 <p><img src="/images/image_33.png" alt=""></p>
 <hr>
@@ -112,5 +119,5 @@ $ child process started successfully, parent exiting
 </ul>
 <hr>
 <h2 id="how-to-use" tabindex="-1"><a class="header-anchor" href="#how-to-use" aria-hidden="true">#</a> How to use</h2>
-<p><RouterLink to="/guide/user-manual.html">UserMantal</RouterLink></p>
+<p><RouterLink to="/guide/user-manual.html">UserManual</RouterLink></p>
 </template>
