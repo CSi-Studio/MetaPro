@@ -1,5 +1,7 @@
 # README
 
+### This version is for academic use only. For commercial use, please contact us.
+
 ## User Manual 🥳
 
 [MetaPro User Manual](https://csi-studio.github.io/MetaPro/guide/user-manual.html)
